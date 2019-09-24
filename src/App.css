@@ -1,33 +1,165 @@
-.App {
-  text-align: center;
+.navbar {
+    background-color: #1eb25b;
+    margin-bottom: 29px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.navbar-brand {
+    display: flex;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar-brand > img {
+    padding: 7px 14px;
 }
 
-.App-link {
-  color: #61dafb;
+.Logo {
+    /*width: 89px;*/
+    /*height: 40px;*/
+    object-fit: contain;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.searchbar {
+    width: 587.8px !important;
+    height: 37px !important;
 }
+
+.kategori-btn {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.btn-navbar {
+    border: solid 5px white !important;
+    border-radius: 10% !important;
+}
+
+.btn-lang {
+    width: 21px;
+    height: 21px;
+    object-fit: contain;
+}
+
+.white-font {
+    color: #ffffff;
+}
+
+.top-font {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: left;
+    color: #8e8e8e;
+}
+
+.top-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0px !important;
+}
+
+.main-carousel {
+    margin-bottom: 20px;
+}
+
+.main-card-container {
+    border-radius: 15px;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-card-title {
+    display: flex;
+    justify-content: center;
+    font-family: Lato;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #383746;
+}
+
+.main-cards-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-cards-image {
+    width: 616px;
+    height: 230px;
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-cards {
+    width: 162px !important;
+    height: 152px !important;
+    border-radius: 10px !important;
+    border: solid 1px #cecece !important;
+    margin-right: 45px !important;
+}
+
+.carousel-cards {
+    width: 616px !important;
+    height: 231px !important;
+    margin-right: 20px !important;
+    /*border-radius: 10px !important;*/
+    /*border: solid 1px #cecece !important;*/
+    /*padding:10px;*/
+}
+
+.react-multiple-carousel__arrow {
+    min-width: 27px;
+    min-height: 27px;
+    background-color: #4fba6f;
+    border-radius: 30px !important;
+}
+
+.lagi-nyari {
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #383746;
+}
+
+.main-container {
+    width: 100%;
+}
+
+.main-footer {
+    background-color: #1eb25b !important;
+    color: #ffffff;
+}
+
+.body {
+    font-family: Lato !important;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: left;
+}
+

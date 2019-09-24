@@ -1,6 +1,5 @@
 import MainStore from './MainStore';
-import {Settings} from '../configuration/index';
-import {inject, observer} from 'mobx-react';
+import Settings from './Settings';
 
 const stores = {
     store: new MainStore(),
@@ -8,7 +7,6 @@ const stores = {
 };
 
 const storeKeys = Object.keys(stores).map(key => key);
-const injectStore = (screen) => inject(...storeKeys)(observer(screen))
 
-export{storeKeys, injectStore}
+export{storeKeys}
 export default stores

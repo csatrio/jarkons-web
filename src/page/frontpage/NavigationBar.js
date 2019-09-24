@@ -65,11 +65,11 @@ export default class NavigationBar extends React.Component {
 
                             <InputGroup className="searchbar col-sm-7">
                                 <InputGroupAddon addonType="prepend">
-                                    <InputGroupText>
+                                    <InputGroupText className="searchicon">
                                         <FontAwesomeIcon icon={faSearch}/>
                                     </InputGroupText>
                                 </InputGroupAddon>
-                                <Input placeholder="Cari nama tempat, perusahaan, atau produk"/>
+                                <Input placeholder="Cari nama tempat, perusahaan, atau produk" className="searchtext"/>
                             </InputGroup>
 
                             <ButtonGroup className="col-sm-2 mr-3">

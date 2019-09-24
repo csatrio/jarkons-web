@@ -1,5 +1,5 @@
 import React from 'react';
-
+import google from '../../assets/frontpage/google.svg'
 export default class Footer extends React.Component {
 
     render() {
@@ -11,10 +11,11 @@ export default class Footer extends React.Component {
                         {/* Grid row */}
                         <div className="row">
                             {/* Grid column */}
-                            <div className="col-md-6 mt-md-0 mt-3">
+                            <div className="col-md-4 mt-md-0 mt-3">
                                 {/* Content */}
                                 <h5>Jarkons - Aplikasi Pencari Info Konstruksi No 1 Di Indonesia</h5>
-                                <p>Aplikasi tersedia di:</p>
+                                <p className="black-text">Aplikasi tersedia di:</p>
+                                <img className="playstore" src={google}/>
                             </div>
                             {/* Grid column */}
                             <hr className="clearfix w-100 d-md-none pb-3"/>

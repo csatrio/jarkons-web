@@ -23,6 +23,16 @@
     height: 37px !important;
 }
 
+.searchtext {
+    border-left: none !important;
+}
+
+.searchicon {
+    border-right: none !important;
+    background-color: white !important;
+    color: #1baa56 !important;
+}
+
 .kategori-btn {
     color: white;
     font-size: 14px;
@@ -133,6 +143,10 @@
     border-radius: 30px !important;
 }
 
+.react-multi-carousel-dot--active button {
+    background: #1baa56 !important;
+}
+
 .lagi-nyari {
     font-family: Lato;
     font-size: 18px;
@@ -152,6 +166,15 @@
 .main-footer {
     background-color: #1eb25b !important;
     color: #ffffff;
+}
+
+.playstore {
+    width: 136px;
+    height: 40px;
+}
+
+.black-text {
+    color: black;
 }
 
 .body {

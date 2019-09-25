@@ -13,8 +13,8 @@
 }
 
 .Logo {
-    /*width: 89px;*/
-    /*height: 40px;*/
+    width: 89px;
+    height: 40px;
     object-fit: contain;
 }
 
@@ -33,11 +33,16 @@
     color: #1baa56 !important;
 }
 
-.kategori-btn {
+.btn-kategori {
     color: white;
     font-size: 14px;
     font-weight: bold;
     color: #ffffff;
+}
+
+.btn-masuk{
+    background-color: #1eb25b !important;
+    border: none !important;
 }
 
 .btn-navbar {
@@ -105,18 +110,12 @@
     width: 80px;
     height: 80px;
     object-fit: contain;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .carousel-cards-image {
     width: 616px;
     height: 230px;
     object-fit: contain;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .main-cards {
@@ -131,9 +130,6 @@
     width: 616px !important;
     height: 231px !important;
     margin-right: 20px !important;
-    /*border-radius: 10px !important;*/
-    /*border: solid 1px #cecece !important;*/
-    /*padding:10px;*/
 }
 
 .react-multiple-carousel__arrow {
@@ -151,11 +147,7 @@
     font-family: Lato;
     font-size: 18px;
     font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
     line-height: 1.2;
-    letter-spacing: normal;
-    text-align: left;
     color: #383746;
 }
 
@@ -168,9 +160,20 @@
     color: #ffffff;
 }
 
+.footer-font{
+    font-family: Lato;
+    font-size: 14px;
+    line-height: 1.21;
+}
+
 .playstore {
     width: 136px;
     height: 40px;
+}
+
+.playstore-aplikasi-tersedia {
+    font-size: 14px;
+    color: #383746;
 }
 
 .black-text {

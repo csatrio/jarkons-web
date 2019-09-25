@@ -17,17 +17,6 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faListUl, faSearch} from '@fortawesome/free-solid-svg-icons'
 
 
-const navStyle = {
-    zIndex: 99999,
-    opacity: 0.8
-};
-
-const bgStyle = {
-    backgroundSize: 'cover',
-    width: 1800,
-    height: 640
-}
-
 export default class NavigationBar extends React.Component {
     constructor(props) {
         super(props);
@@ -58,7 +47,7 @@ export default class NavigationBar extends React.Component {
                         <NavbarToggler onClick={this.toggle}/>
                         <Collapse isOpen={this.state.isOpen} navbar>
 
-                            <div className="kategori-btn col-sm-1">
+                            <div className="btn-kategori col-sm-1">
                                 <FontAwesomeIcon icon={faListUl}/>
                                 &nbsp;&nbsp;Kategori
                             </div>
@@ -73,7 +62,7 @@ export default class NavigationBar extends React.Component {
                             </InputGroup>
 
                             <ButtonGroup className="col-sm-2 mr-3">
-                                <Button size="sm" color="success" className="btn-navbar" style={{marginRight: 10}}>Masuk</Button>
+                                <Button className="btn-masuk" size="sm" color="success" style={{marginRight: 10}}>Masuk</Button>
                                 <Button size="sm" color="success" className="btn-navbar">Daftar</Button>
                             </ButtonGroup>
 

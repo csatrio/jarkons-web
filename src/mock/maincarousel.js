@@ -1,0 +1,10 @@
+export const mainCarousel = [
+    {url: 'http://ridley-thomas.lacounty.gov/Health/wp-content/uploads/2015/11/HIE-616x230.png'},
+    {url: 'http://ridley-thomas.lacounty.gov/Health/wp-content/uploads/2015/11/ThinkstockPhotos-464832284-11-1030x773-616x230.jpg'},
+    {url: 'http://ridley-thomas.lacounty.gov/Health/wp-content/uploads/2015/11/HIE-616x230.png'},
+    {url: 'http://ridley-thomas.lacounty.gov/Health/wp-content/uploads/2015/11/ThinkstockPhotos-464832284-11-1030x773-616x230.jpg'},
+    {url: 'http://ridley-thomas.lacounty.gov/Health/wp-content/uploads/2015/11/HIE-616x230.png'},
+    {url: 'http://ridley-thomas.lacounty.gov/Health/wp-content/uploads/2015/11/ThinkstockPhotos-464832284-11-1030x773-616x230.jpg'},
+    {url: 'http://ridley-thomas.lacounty.gov/Health/wp-content/uploads/2015/11/HIE-616x230.png'},
+    {url: 'http://ridley-thomas.lacounty.gov/Health/wp-content/uploads/2015/11/ThinkstockPhotos-464832284-11-1030x773-616x230.jpg'},
+]

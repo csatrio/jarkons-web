@@ -24,11 +24,15 @@
 }
 
 .searchtext {
+    border-bottom-right-radius: 1rem !important;
+    border-top-right-radius: 1rem !important;
     border-left: none !important;
 }
 
 .searchicon {
     border-right: none !important;
+    border-bottom-left-radius: 1rem !important;
+    border-top-left-radius: 1rem !important;
     background-color: white !important;
     color: #1baa56 !important;
 }
@@ -40,7 +44,7 @@
     color: #ffffff;
 }
 
-.btn-masuk{
+.btn-masuk {
     background-color: #1eb25b !important;
     border: none !important;
 }
@@ -56,11 +60,15 @@
     object-fit: contain;
 }
 
-.white-font {
+.font-white {
     color: #ffffff;
 }
 
-.top-font {
+.font-green {
+    color: #42b549;
+}
+
+.font-top {
     font-family: Lato;
     font-size: 14px;
     font-weight: normal;
@@ -72,29 +80,7 @@
     color: #8e8e8e;
 }
 
-.top-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 0px !important;
-}
-
-.main-carousel {
-    margin-bottom: 20px;
-}
-
-.main-card-container {
-    border-radius: 15px;
-    -webkit-backdrop-filter: blur(30px);
-    backdrop-filter: blur(30px);
-    box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.16);
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-}
-
-.main-card-title {
-    display: flex;
-    justify-content: center;
+.font-section-heading {
     font-family: Lato;
     font-size: 25px;
     font-weight: bold;
@@ -106,19 +92,48 @@
     color: #383746;
 }
 
-.main-cards-image {
+.top-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 0px !important;
+}
+
+.image-main-cards {
     width: 80px;
     height: 80px;
     object-fit: contain;
 }
 
-.carousel-cards-image {
+.image-179 {
+    width: 179px;
+    height: 151px;
+    object-fit: contain;
+}
+
+.image-event {
+    width: 464px;
+    height: 179px;
+    border-radius: 15px;
+}
+
+.image-card-news {
+    width: 491px;
+    height: 270px;
+    border-radius: 5px;
+}
+
+.image-child-news {
+    width: 179px;
+    height: 118px;
+}
+
+.image-cards-main-carousel {
     width: 616px;
     height: 230px;
     object-fit: contain;
 }
 
-.main-cards {
+.cards-main {
     width: 162px !important;
     height: 152px !important;
     border-radius: 10px !important;
@@ -126,10 +141,69 @@
     margin-right: 45px !important;
 }
 
-.carousel-cards {
-    width: 616px !important;
+.cards-main-carousel {
+    width: 617px !important;
     height: 231px !important;
     margin-right: 20px !important;
+}
+
+.cards-kategori-container {
+    border-radius: 15px;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards-testimonial {
+    width: 355px;
+    height: 215px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+    font-size: 14px !important;
+}
+
+.cards-pengadaan {
+    width: 355px;
+    height: 215px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #383746;
+}
+
+.cards-179 {
+    width: 182px;
+    height: 152px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.cards-179-footer {
+    width: 182px;
+    height: 30px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-color: #cecece;
+}
+
+.cards-news {
+    width: 491px;
+    height: 270px;
+    border-radius: 5px;
+}
+
+.cards-news-footer {
+    width: 491px;
+    height: 70px;
+    opacity: 0.85;
+    border-radius: 5px;
+    background-color: #cecece;
 }
 
 .react-multiple-carousel__arrow {
@@ -151,8 +225,15 @@
     color: #383746;
 }
 
+.box-shadow {
+    border-radius: 20px;
+    box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+}
+
 .main-container {
     width: 100%;
+    margin-left: 0px;
 }
 
 .main-footer {
@@ -160,7 +241,7 @@
     color: #ffffff;
 }
 
-.footer-font{
+.footer-font {
     font-family: Lato;
     font-size: 14px;
     line-height: 1.21;

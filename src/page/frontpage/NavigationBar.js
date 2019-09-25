@@ -66,7 +66,7 @@ export default class NavigationBar extends React.Component {
                                 <Button size="sm" color="success" className="btn-navbar">Daftar</Button>
                             </ButtonGroup>
 
-                            <ButtonGroup className="col-sm-2 white-font">
+                            <ButtonGroup className="col-sm-2 font-white">
                                 <img src={LangId}/>ID&nbsp;&nbsp;<span className="border border-white"></span>&nbsp;&nbsp;<img src={LangId}/>EN
                             </ButtonGroup>
                         </Collapse>

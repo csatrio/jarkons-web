@@ -1,0 +1,7 @@
+
+const url = 'https://www.warehousemobile.co.nz/assets/September-2019-new-rates/w1318-wm-int-calling-web-png-packs-179x179-72-5.png'
+export default [
+    {url:url, title:'Wijaya Karya',},
+    {url:url, title:'Adhi Karya',},
+    {url:url, title:'Multi Karya',},
+]

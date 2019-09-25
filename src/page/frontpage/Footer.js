@@ -5,13 +5,6 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import {faFacebookSquare, faTwitterSquare, faInstagram} from '@fortawesome/free-brands-svg-icons';
 
-
-const styles = {
-    paddingZero: {
-        padding: '0px !important',
-    },
-}
-
 export default class Footer extends React.Component {
 
     render() {

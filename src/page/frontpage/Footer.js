@@ -27,7 +27,7 @@ export default class Footer extends React.Component {
                                 {/* Content */}
                                 <h5>Jarkons - Aplikasi Pencari Info Konstruksi No 1 Di Indonesia</h5>
                                 <p className="black-text playstore-aplikasi-tersedia">Aplikasi tersedia di:</p>
-                                <img className="playstore" src={google}/>
+                                <img className="playstore mb-2" src={google}/>
                             </div>
                             {/* Grid column */}
                             <hr className="clearfix w-100 d-md-none pb-3"/>

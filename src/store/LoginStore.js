@@ -3,15 +3,15 @@ import {observable, action} from 'mobx';
 export default class LoginStore {
 
     @observable
-    isShowLogin = false;
+    isShow = false;
 
     @action
-    toggleLogin = () => {
-        this.isShowLogin = !this.isShowLogin;
+    toggle = () => {
+        this.isShow = !this.isShow;
     }
 
     @action
-    closeLogin = () => {
-        this.isShowLogin = false;
+    close = () => {
+        this.isShow = false;
     }
 }

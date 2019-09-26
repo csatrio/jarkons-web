@@ -15,6 +15,7 @@ import {mainCarousel} from "../../mock/maincarousel";
 import {kategori} from "../../mock/kategori";
 import {LihatSemua} from "./LihatSemua";
 import ModalLogin from "../components/ModalLogin";
+import ModalDaftar from "../components/ModalDaftar";
 
 const responsive = {
     superLargeDesktop: {
@@ -38,7 +39,7 @@ const responsive = {
 
 export default class FrontPage extends React.Component {
     render() {
-        const {LoginStore} = this.props
+        const {LoginStore, DaftarStore} = this.props
         return (
             <React.Fragment>
                 <Container className="text-right">
@@ -231,7 +232,8 @@ export default class FrontPage extends React.Component {
                 </Container>
 
                 <Footer/>
-                <ModalLogin showModal={LoginStore.isShowLogin} {...this.props}/>
+                <ModalLogin showModal={LoginStore.isShow}/>
+                <ModalDaftar showModal={DaftarStore.isShow}/>
             </React.Fragment>
         );
     }

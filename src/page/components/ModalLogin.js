@@ -12,10 +12,12 @@ class ModalLogin extends React.Component {
         const {className, LoginStore} = this.props
         return (
             <div>
-                <Modal isOpen={LoginStore.isShowLogin} toggle={LoginStore.toggleLogin}
-                       className={"login-modal " + className}>
+                <Modal isOpen={LoginStore.isShow}
+                       toggle={LoginStore.toggle}
+                       className={"p-3 login-modal" + (typeof(className) !== 'undefined' ? (' ' + className) : '')}
+                >
 
-                    <ModalBody className="p-3">
+                    <ModalBody>
                         <div className="font-login-green mb-2">Masuk ke akun anda</div>
 
                         <FormGroup className="mb-3">

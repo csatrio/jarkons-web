@@ -21,10 +21,30 @@
     color: #808080;
 }
 
+.font-signup {
+    font-family: Lato;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.45;
+    letter-spacing: -0.22px;
+    text-align: left;
+    color: #000000;
+}
+
+.signup-modal {
+    max-width: 380px !important;
+}
+
 .input-login {
     border-radius: 10px !important;
     background-color: #e0e0e0 !important;
     width: 304px;
+}
+
+.input-signup {
+    border-radius: 10px !important;
 }
 
 .login-modal {
@@ -44,8 +64,20 @@
     background-color: #1eb25b !important;
 }
 
+.btn-signup {
+    width: 300px;
+    border-radius: 10px !important;
+    background-color: #1eb25b !important;
+}
+
 @media (max-width: 368px) {
     .btn-login {
+        padding: 2px 4px;
+        font-size: 80%;
+        line-height: 1;
+        width: 80px
+    }
+    .btn-signup {
         padding: 2px 4px;
         font-size: 80%;
         line-height: 1;

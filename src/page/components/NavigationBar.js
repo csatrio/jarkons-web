@@ -21,25 +21,20 @@ import {storeKeys} from "../../store";
 @inject(...storeKeys)
 @observer
 export default class NavigationBar extends React.Component {
+    state = {
+        isOpen: false,
+    };
+
     constructor(props) {
         super(props);
-
-        this.state = {
-            isOpen: false,
-            showLogin: false,
-        };
     }
 
     toggle = () => {
         this.setState({isOpen: !this.state.isOpen});
     }
 
-    loginToggle = () => {
-        this.setState({showLogin: !this.state.showLogin});
-    }
-
     render() {
-        const {LoginStore} = this.props
+        const {LoginStore, DaftarStore} = this.props
         return (
             <React.Fragment>
                 <Navbar light expand="md">
@@ -68,8 +63,9 @@ export default class NavigationBar extends React.Component {
 
                             <ButtonGroup className="col-sm-2 mr-3">
                                 <Button className="btn-masuk" size="sm" color="success"
-                                        onClick={LoginStore.toggleLogin}>Masuk</Button>
-                                <Button size="sm" color="success" className="btn-navbar mr-2">Daftar</Button>
+                                        onClick={LoginStore.toggle}>Masuk</Button>
+                                <Button size="sm" color="success" className="btn-navbar mr-2"
+                                        onClick={DaftarStore.toggle}>Daftar</Button>
                             </ButtonGroup>
 
                             <ButtonGroup className="col-sm-2 font-white font-weight-bold font-lato-14 ml-3">

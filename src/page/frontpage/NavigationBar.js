@@ -52,7 +52,7 @@ export default class NavigationBar extends React.Component {
                                 &nbsp;&nbsp;Kategori
                             </div>
 
-                            <InputGroup className="searchbar col-sm-7">
+                            <InputGroup className="searchbar col-sm-7 mb-1">
                                 <InputGroupAddon addonType="prepend">
                                     <InputGroupText className="searchicon">
                                         <FontAwesomeIcon icon={faSearch}/>

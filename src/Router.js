@@ -1,6 +1,5 @@
 import React from 'react'
-import './index.css'
-import {Route, Link, BrowserRouter as Router, Switch, withRouter} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch, withRouter} from 'react-router-dom'
 import FrontPage from './page/frontpage/FrontPage'
 import {inject, observer} from "mobx-react";
 
@@ -11,7 +10,6 @@ export default () => (
     <Router>
         <Switch>
             <Route exact path="/" component={doInject(FrontPage)}/>
-            <Route path="/users" component={doInject(FrontPage)}/>
         </Switch>
     </Router>
 )

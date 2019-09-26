@@ -19,8 +19,8 @@
 }
 
 .searchbar {
-    width: 587.8px !important;
-    height: 37px !important;
+    width: 587.8px;
+    height: 37px;
 }
 
 .searchtext {
@@ -68,6 +68,10 @@
     color: #42b549;
 }
 
+.black-text {
+    font-black-text: black;
+}
+
 .font-top {
     font-family: Lato;
     font-size: 14px;
@@ -92,16 +96,34 @@
     color: #383746;
 }
 
-.top-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 0px !important;
+.font-lagi-nyari {
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #383746;
+}
+
+.font-footer {
+    font-family: Lato;
+    font-size: 14px;
+    line-height: 1.21;
+}
+
+.font-footer-playstore {
+    font-size: 14px;
+    color: #383746;
 }
 
 .image-main-cards {
     width: 80px;
     height: 80px;
     object-fit: contain;
+}
+
+.image-playstore-footer {
+    width: 136px;
+    height: 40px;
 }
 
 .image-179 {
@@ -117,7 +139,7 @@
 }
 
 .image-card-news {
-    width: 491px;
+    width: 471px;
     height: 270px;
     border-radius: 5px;
 }
@@ -147,7 +169,7 @@
     margin-right: 20px !important;
 }
 
-.cards-kategori-container {
+.cards-kategori {
     border-radius: 15px;
     -webkit-backdrop-filter: blur(30px);
     backdrop-filter: blur(30px);
@@ -155,6 +177,7 @@
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
+    color: #383746;
 }
 
 .cards-testimonial {
@@ -164,6 +187,7 @@
     box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.16);
     background-color: #ffffff;
     font-size: 14px !important;
+    color: #383746;
 }
 
 .cards-pengadaan {
@@ -184,7 +208,13 @@
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
 }
 
-.cards-179-footer {
+.cards-news {
+    width: 471px;
+    height: 270px;
+    border-radius: 5px;
+}
+
+.footer-cards-179 {
     width: 182px;
     height: 30px;
     border-bottom-right-radius: 3px;
@@ -192,18 +222,17 @@
     background-color: #cecece;
 }
 
-.cards-news {
-    width: 491px;
-    height: 270px;
-    border-radius: 5px;
-}
-
-.cards-news-footer {
-    width: 491px;
+.footer-cards-news {
+    width: 471px;
     height: 70px;
     opacity: 0.85;
     border-radius: 5px;
     background-color: #cecece;
+}
+
+.footer-main {
+    background-color: #1eb25b !important;
+    color: #ffffff;
 }
 
 .react-multiple-carousel__arrow {
@@ -217,48 +246,19 @@
     background: #1baa56 !important;
 }
 
-.lagi-nyari {
-    font-family: Lato;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 1.2;
-    color: #383746;
-}
-
 .box-shadow {
     border-radius: 20px;
     box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.16);
     background-color: #ffffff;
 }
 
-.main-container {
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.container-main {
     width: 100%;
     margin-left: 0px;
-}
-
-.main-footer {
-    background-color: #1eb25b !important;
-    color: #ffffff;
-}
-
-.footer-font {
-    font-family: Lato;
-    font-size: 14px;
-    line-height: 1.21;
-}
-
-.playstore {
-    width: 136px;
-    height: 40px;
-}
-
-.playstore-aplikasi-tersedia {
-    font-size: 14px;
-    color: #383746;
-}
-
-.black-text {
-    color: black;
 }
 
 .body {

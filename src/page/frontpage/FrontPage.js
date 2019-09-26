@@ -39,7 +39,7 @@ export default class FrontPage extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <Container className="top-container">
+                <Container className="text-right">
                     <a href="#" className="font-top mr-3">Keuntungan Iklan & Membership</a>
                     <a href="#" className="font-top mr-3">Lowongan Kerja</a>
                     <a href="#" className="font-top mr-3">Pusat Bantuan</a>
@@ -47,9 +47,9 @@ export default class FrontPage extends React.Component {
                 </Container>
 
                 <NavigationBar/>
-                <Container className="main-container">
+                <Container className="container-main">
 
-                    <Row className="mb-3">
+                    <Row>
                         <Col>
                             <Carousel className="p-5" responsive={responsive}
                                       swipeable={true}
@@ -74,9 +74,9 @@ export default class FrontPage extends React.Component {
 
                     <Row className="mb-3">
                         <Col>
-                            <div className="cards-kategori-container">
+                            <div className="cards-kategori">
                                 <div className="font-section-heading text-center">Kategori Pilihan</div>
-                                <div className="lagi-nyari ml-4">Hai, lagi mau nyari apa nih?</div>
+                                <div className="font-lagi-nyari ml-4">Hai, lagi mau nyari apa nih?</div>
 
                                 <Carousel className="p-5" responsive={responsive}
                                           swipeable={true}
@@ -104,9 +104,9 @@ export default class FrontPage extends React.Component {
                     <p className="font-section-heading text-center">Pengadaan</p>
                     <Row className="mb-3">
                         {pengadaan.map((item, index) => (
-                            <React.Fragment key={'cc-' + index}>
-                                <Col className="cards-pengadaan mr-4 p-4">
-                                    <p className="font-green font-weight-bold">{item.title}</p>
+                            <React.Fragment key={'pe-' + index}>
+                                <Col className="cards-pengadaan mr-4 p-4 mt-1">
+                                    <p className="font-green font-weight-bold text-truncate">{item.title}</p>
                                     <p>{item.description}</p>
                                 </Col>
                             </React.Fragment>
@@ -120,11 +120,11 @@ export default class FrontPage extends React.Component {
                             <p className="font-section-heading">Kontraktor</p>
                             <Row>
                                 {kontraktor.map((item, index) => (
-                                    <Col>
-                                        <div className="cards-179">
+                                    <Col key={'ko-' + index}>
+                                        <div className="cards-179 mt-1">
                                             <img className="image-179" src={item.imageUrl}/>
                                         </div>
-                                        <div className="cards-179-footer text-center">{item.title}</div>
+                                        <div className="footer-cards-179 text-center">{item.title}</div>
                                     </Col>
                                 ))}
                             </Row>
@@ -147,11 +147,11 @@ export default class FrontPage extends React.Component {
                             <p className="font-section-heading">Developer</p>
                             <Row className="mb-3">
                                 {developer.map((item, index) => (
-                                    <Col>
-                                        <div className="cards-179">
+                                    <Col key={'de-' + index}>
+                                        <div className="cards-179 mt-1">
                                             <img className="image-179" src={item.imageUrl}/>
                                         </div>
-                                        <div className="cards-179-footer text-center">{item.title}</div>
+                                        <div className="footer-cards-179 text-center">{item.title}</div>
                                     </Col>
                                 ))}
                                 <Col>&nbsp;</Col>
@@ -160,11 +160,11 @@ export default class FrontPage extends React.Component {
                             <p className="font-section-heading">Jual/Sewa Alat Berat</p>
                             <Row>
                                 {alatberat.map((item, index) => (
-                                    <Col>
-                                        <div className="cards-179">
+                                    <Col key={'ab-' + index}>
+                                        <div className="cards-179 mt-1">
                                             <img className="image-179" src={item.imageUrl}/>
                                         </div>
-                                        <div className="cards-179-footer text-center">{item.title}</div>
+                                        <div className="footer-cards-179 text-center">{item.title}</div>
                                     </Col>
                                 ))}
                             </Row>
@@ -176,18 +176,21 @@ export default class FrontPage extends React.Component {
                             <p className="font-section-heading">News</p>
                             <Row className="text-right">
                                 <Row>
-                                    <div className="cards-news">
-                                        <img className="image-card-news" src={headline.imageUrl}/>
-                                    </div>
-                                    <div className="cards-news-footer text-center">{headline.title}</div>
+                                    <Col>
+                                        <div className="cards-news mt-1">
+                                            <img className="image-card-news" src={headline.imageUrl}/>
+                                        </div>
+                                        <div className="footer-cards-news text-center text-truncate">{headline.title}</div>
+                                    </Col>
                                 </Row>
                                 <Row className="cards-child-news text-center">
-                                    {news.map((item, index)=>(
-                                        <React.Fragment>
+                                    {news.map((item, index) => (
+                                        <React.Fragment key={'cn-' + index}>
                                             <Col sm={6} className="mt-2 mb-3">
                                                 <Card>
                                                     <CardImg src={item.imageUrl} className="image-child-news"/>
-                                                    <CardFooter className="bg-white font-green">{item.title}</CardFooter>
+                                                    <CardFooter
+                                                        className="bg-white font-green text-truncate">{item.title}</CardFooter>
                                                 </Card>
                                             </Col>
                                         </React.Fragment>

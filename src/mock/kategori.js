@@ -5,9 +5,9 @@ import group102 from "../assets/frontpage/Group102.png";
 import wheelbarrow from "../assets/frontpage/wheel-barrow.png";
 
 export const kategori = [
-    {url: house, title: 'Developer'},
-    {url: towerCrane, title: 'Kontraktor'},
-    {url: demolishing, title: 'Jual/Sewa Alat Berat'},
-    {url: group102, title: 'Konsultan'},
-    {url: wheelbarrow, title: 'Leveransir'},
+    {imageUrl: house, title: 'Developer'},
+    {imageUrl: towerCrane, title: 'Kontraktor'},
+    {imageUrl: demolishing, title: 'Jual/Sewa Alat Berat'},
+    {imageUrl: group102, title: 'Konsultan'},
+    {imageUrl: wheelbarrow, title: 'Leveransir'},
 ]

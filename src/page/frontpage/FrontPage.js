@@ -62,7 +62,7 @@ export default class FrontPage extends React.Component {
                                 {mainCarousel.map((item, index) => (
                                     <React.Fragment key={'mc-' + index}>
                                         <div className="cards-main-carousel mr-5">
-                                            <img className="image-cards-main-carousel" src={item.url}/>
+                                            <img className="image-cards-main-carousel" src={item.imageUrl}/>
                                         </div>
                                     </React.Fragment>
                                 ))}
@@ -89,7 +89,7 @@ export default class FrontPage extends React.Component {
                                     {kategori.map((item, index) => (
                                         <React.Fragment key={'cc-' + index}>
                                             <Col className="cards-main text-center">
-                                                <img className="image-main-cards mt-3" src={item.url}/>
+                                                <img className="image-main-cards mt-3" src={item.imageUrl}/>
                                                 <p className="text-center">{item.title}</p>
                                             </Col>
                                         </React.Fragment>
@@ -122,7 +122,7 @@ export default class FrontPage extends React.Component {
                                 {kontraktor.map((item, index) => (
                                     <Col>
                                         <div className="cards-179">
-                                            <img className="image-179" src={item.url}/>
+                                            <img className="image-179" src={item.imageUrl}/>
                                         </div>
                                         <div className="cards-179-footer text-center">{item.title}</div>
                                     </Col>
@@ -149,7 +149,7 @@ export default class FrontPage extends React.Component {
                                 {developer.map((item, index) => (
                                     <Col>
                                         <div className="cards-179">
-                                            <img className="image-179" src={item.url}/>
+                                            <img className="image-179" src={item.imageUrl}/>
                                         </div>
                                         <div className="cards-179-footer text-center">{item.title}</div>
                                     </Col>
@@ -162,7 +162,7 @@ export default class FrontPage extends React.Component {
                                 {alatberat.map((item, index) => (
                                     <Col>
                                         <div className="cards-179">
-                                            <img className="image-179" src={item.url}/>
+                                            <img className="image-179" src={item.imageUrl}/>
                                         </div>
                                         <div className="cards-179-footer text-center">{item.title}</div>
                                     </Col>
@@ -177,7 +177,7 @@ export default class FrontPage extends React.Component {
                             <Row className="text-right">
                                 <Row>
                                     <div className="cards-news">
-                                        <img className="image-card-news" src={headline.url}/>
+                                        <img className="image-card-news" src={headline.imageUrl}/>
                                     </div>
                                     <div className="cards-news-footer text-center">{headline.title}</div>
                                 </Row>
@@ -186,7 +186,7 @@ export default class FrontPage extends React.Component {
                                         <React.Fragment>
                                             <Col sm={6} className="mt-2 mb-3">
                                                 <Card>
-                                                    <CardImg src={item.url} className="image-child-news"/>
+                                                    <CardImg src={item.imageUrl} className="image-child-news"/>
                                                     <CardFooter className="bg-white font-green">{item.title}</CardFooter>
                                                 </Card>
                                             </Col>

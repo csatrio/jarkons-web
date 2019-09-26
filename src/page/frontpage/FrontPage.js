@@ -14,6 +14,7 @@ import news, {headline} from "../../mock/news";
 import {mainCarousel} from "../../mock/maincarousel";
 import {kategori} from "../../mock/kategori";
 import {LihatSemua} from "./LihatSemua";
+import ModalLogin from "../components/ModalLogin";
 
 const responsive = {
     superLargeDesktop: {
@@ -37,6 +38,7 @@ const responsive = {
 
 export default class FrontPage extends React.Component {
     render() {
+        const {FrontpageStore} = this.props
         return (
             <React.Fragment>
                 <Container className="text-right">
@@ -106,7 +108,7 @@ export default class FrontPage extends React.Component {
                         {pengadaan.map((item, index) => (
                             <React.Fragment key={'pe-' + index}>
                                 <Col className="cards-pengadaan mr-4 p-4 mt-1">
-                                    <p className="font-green font-weight-bold text-truncate">{item.title}</p>
+                                    <p className="font-login-green font-weight-bold text-truncate">{item.title}</p>
                                     <p>{item.description}</p>
                                 </Col>
                             </React.Fragment>
@@ -190,7 +192,7 @@ export default class FrontPage extends React.Component {
                                                 <Card>
                                                     <CardImg src={item.imageUrl} className="image-child-news"/>
                                                     <CardFooter
-                                                        className="bg-white font-green text-truncate">{item.title}</CardFooter>
+                                                        className="bg-white font-login-green text-truncate">{item.title}</CardFooter>
                                                 </Card>
                                             </Col>
                                         </React.Fragment>
@@ -216,8 +218,8 @@ export default class FrontPage extends React.Component {
                                 {testimonial.map((testi, index) => (
                                     <React.Fragment key={'te-' + index}>
                                         <div className="font-weight-bold mb-2">{testi.name}</div>
-                                        <div className="font-green">{testi.jobTitle}</div>
-                                        <div className="font-green">{testi.company}</div>
+                                        <div className="font-login-green">{testi.jobTitle}</div>
+                                        <div className="font-login-green">{testi.company}</div>
                                         <p className="text-justify mt-3">{testi.content}</p>
                                     </React.Fragment>
                                 ))}
@@ -228,6 +230,7 @@ export default class FrontPage extends React.Component {
                 </Container>
 
                 <Footer/>
+                <ModalLogin showModal={FrontpageStore.isShowLogin} {...this.props}/>
             </React.Fragment>
         );
     }

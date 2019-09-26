@@ -1,8 +1,10 @@
 import MainStore from './MainStore';
+import FrontpageStore from './FrontpageStore';
 import Settings from './Settings';
 
 const stores = {
     store: new MainStore(),
+    FrontpageStore: new FrontpageStore(),
     settings: new Settings()
 };
 

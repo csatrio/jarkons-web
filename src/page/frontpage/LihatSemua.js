@@ -10,7 +10,7 @@ export const LihatSemua = (props) => {
     if (typeof(props.type) !== 'undefined' && props.type === 'row') {
         return (
             <Row className="cursor-pointer mr-3">
-                <div className="font-green offset-10 col-sm-2 text-right pr-0 mr-0 mb-5" onClick={onclick}>
+                <div className="font-login-green offset-10 col-sm-2 text-right pr-0 mr-0 mb-5" onClick={onclick}>
                     <FontAwesomeIcon icon={faPlusCircle} className="mr-1"/>Lihat Semua
                 </div>
             </Row>
@@ -18,7 +18,7 @@ export const LihatSemua = (props) => {
     } else {
         return (
             <Container className="cursor-pointer" onClick={onclick}>
-                <div className="font-green text-right mt-1">
+                <div className="font-login-green text-right mt-1">
                     <FontAwesomeIcon icon={faPlusCircle} className="mr-1"/>Lihat Semua
                 </div>
             </Container>

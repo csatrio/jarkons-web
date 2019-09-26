@@ -1,8 +1,8 @@
 import React from 'react';
 import {observer, Provider} from "mobx-react";
 import Router from './Router'
-import stores, {storeKeys} from "./store";
-import './App.css'
+import stores from "./store";
+import './css/App.css'
 
 @observer
 class App extends React.Component {

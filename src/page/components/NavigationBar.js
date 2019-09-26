@@ -11,32 +11,37 @@ import {
     ButtonGroup,
     Button,
 } from 'reactstrap';
-import Logo from '../../assets/frontpage/Logo.png'
-import LangId from '../../assets/frontpage/indonesia.png'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faListUl, faSearch} from '@fortawesome/free-solid-svg-icons'
+import Logo from '../../assets/frontpage/Logo.png';
+import LangId from '../../assets/frontpage/indonesia.png';
+import {inject, observer} from "mobx-react";
+import {storeKeys} from "../../store";
 
-
+@inject(...storeKeys)
+@observer
 export default class NavigationBar extends React.Component {
     constructor(props) {
         super(props);
 
-        this.toggle = this.toggle.bind(this);
         this.state = {
-            isOpen: false
+            isOpen: false,
+            showLogin: false,
         };
     }
 
-    toggle() {
-        this.setState({
-            isOpen: !this.state.isOpen
-        });
+    toggle = () => {
+        this.setState({isOpen: !this.state.isOpen});
+    }
+
+    loginToggle = () => {
+        this.setState({showLogin: !this.state.showLogin});
     }
 
     render() {
+        const {FrontpageStore} = this.props
         return (
             <React.Fragment>
-
                 <Navbar light expand="md">
                     <div className="container">
                         <NavbarBrand href="/">
@@ -62,7 +67,8 @@ export default class NavigationBar extends React.Component {
                             </InputGroup>
 
                             <ButtonGroup className="col-sm-2 mr-3">
-                                <Button className="btn-masuk" size="sm" color="success">Masuk</Button>
+                                <Button className="btn-masuk" size="sm" color="success"
+                                        onClick={FrontpageStore.toggleLogin}>Masuk</Button>
                                 <Button size="sm" color="success" className="btn-navbar mr-2">Daftar</Button>
                             </ButtonGroup>
 

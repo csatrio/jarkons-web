@@ -1,0 +1,54 @@
+.font-login-green {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    color: #42b549;
+}
+
+.font-login-label {
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    text-align: left;
+    color: #808080;
+}
+
+.input-login {
+    border-radius: 10px !important;
+    background-color: #e0e0e0 !important;
+    width: 304px;
+}
+
+.login-modal {
+    max-width: 368px !important;
+    max-height: 400px !important;
+}
+
+.login-separator {
+    color: #42b549;
+    border: 1px solid #42b549;
+}
+
+.btn-login {
+    width: 122px;
+    height: 40px;
+    border-radius: 10px !important;
+    background-color: #1eb25b !important;
+}
+
+@media (max-width: 368px) {
+    .btn-login {
+        padding: 2px 4px;
+        font-size: 80%;
+        line-height: 1;
+        width: 80px
+    }
+}

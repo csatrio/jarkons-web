@@ -1,10 +1,10 @@
 import MainStore from './MainStore';
-import FrontpageStore from './FrontpageStore';
+import LoginStore from './LoginStore';
 import Settings from './Settings';
 
 const stores = {
     store: new MainStore(),
-    FrontpageStore: new FrontpageStore(),
+    LoginStore: new LoginStore(),
     settings: new Settings()
 };
 

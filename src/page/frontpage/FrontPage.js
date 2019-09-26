@@ -38,7 +38,7 @@ const responsive = {
 
 export default class FrontPage extends React.Component {
     render() {
-        const {FrontpageStore} = this.props
+        const {LoginStore} = this.props
         return (
             <React.Fragment>
                 <Container className="text-right">
@@ -231,7 +231,7 @@ export default class FrontPage extends React.Component {
                 </Container>
 
                 <Footer/>
-                <ModalLogin showModal={FrontpageStore.isShowLogin} {...this.props}/>
+                <ModalLogin showModal={LoginStore.isShowLogin} {...this.props}/>
             </React.Fragment>
         );
     }

@@ -9,10 +9,10 @@ import '../../css/login.css'
 class ModalLogin extends React.Component {
 
     render() {
-        const {className, FrontpageStore} = this.props
+        const {className, LoginStore} = this.props
         return (
             <div>
-                <Modal isOpen={FrontpageStore.isShowLogin} toggle={FrontpageStore.toggleLogin}
+                <Modal isOpen={LoginStore.isShowLogin} toggle={LoginStore.toggleLogin}
                        className={"login-modal " + className}>
 
                     <ModalBody className="p-3">

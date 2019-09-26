@@ -39,7 +39,7 @@ export default class NavigationBar extends React.Component {
     }
 
     render() {
-        const {FrontpageStore} = this.props
+        const {LoginStore} = this.props
         return (
             <React.Fragment>
                 <Navbar light expand="md">
@@ -68,7 +68,7 @@ export default class NavigationBar extends React.Component {
 
                             <ButtonGroup className="col-sm-2 mr-3">
                                 <Button className="btn-masuk" size="sm" color="success"
-                                        onClick={FrontpageStore.toggleLogin}>Masuk</Button>
+                                        onClick={LoginStore.toggleLogin}>Masuk</Button>
                                 <Button size="sm" color="success" className="btn-navbar mr-2">Daftar</Button>
                             </ButtonGroup>
 

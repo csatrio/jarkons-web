@@ -49,7 +49,7 @@ export default class Footer extends React.Component {
                             {/* Grid column */}
                             <div className="col-md-2 mb-md-0 mb-3">
                                 {/* Links */}
-                                <p className="font-footer">Kontak Kami</p>
+                                <p className="font-footer font-weight-bold">Kontak Kami</p>
                                 <div className="font-footer">
                                     <FontAwesomeIcon className="mr-1" icon={faEnvelope}/>saran@jarkonsindonesia.com
                                 </div>

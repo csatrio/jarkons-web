@@ -53,19 +53,17 @@ export default class FrontPage extends React.Component {
 
                     <Row>
                         <Col>
-                            <Carousel className="p-5" responsive={responsive}
+                            <Carousel responsive={responsive}
                                       swipeable={true}
                                       draggable={false}
                                       showDots={true}
                                       containerClass="carousel-container"
-                                      itemClass="carousel-cards"
+                                      itemClass="cards-main-carousel"
                                       removeArrowOnDeviceType={["tablet", "mobile"]}
                             >
                                 {mainCarousel.map((item, index) => (
                                     <React.Fragment key={'mc-' + index}>
-                                        <div className="cards-main-carousel mr-5">
-                                            <img className="image-cards-main-carousel" src={item.imageUrl}/>
-                                        </div>
+                                        <img className="image-main-carousel mr-5" src={item.imageUrl}/>
                                     </React.Fragment>
                                 ))}
                             </Carousel>
@@ -74,30 +72,28 @@ export default class FrontPage extends React.Component {
                     <LihatSemua type="row"/>
 
 
-                    <Row className="mb-3">
+                    <Row className="cards-kategori mb-3">
                         <Col>
-                            <div className="cards-kategori">
-                                <div className="font-section-heading text-center">Kategori Pilihan</div>
-                                <div className="font-lagi-nyari ml-4">Hai, lagi mau nyari apa nih?</div>
+                            <div className="font-section-heading text-center">Kategori Pilihan</div>
+                            <div className="font-lagi-nyari ml-4">Hai, lagi mau nyari apa nih?</div>
 
-                                <Carousel className="p-5" responsive={responsive}
-                                          swipeable={true}
-                                          draggable={false}
-                                          showDots={true}
-                                          containerClass="carousel-container"
-                                          itemClass="main-cards"
-                                          removeArrowOnDeviceType={["tablet", "mobile"]}
-                                >
-                                    {kategori.map((item, index) => (
-                                        <React.Fragment key={'cc-' + index}>
-                                            <Col className="cards-main text-center">
-                                                <img className="image-main-cards mt-3" src={item.imageUrl}/>
-                                                <p className="text-center">{item.title}</p>
-                                            </Col>
-                                        </React.Fragment>
-                                    ))}
-                                </Carousel>
-                            </div>
+                            <Carousel className="p-5" responsive={responsive}
+                                      swipeable={true}
+                                      draggable={false}
+                                      showDots={true}
+                                      containerClass="carousel-container"
+                                      itemClass="main-cards"
+                                      removeArrowOnDeviceType={["tablet", "mobile"]}
+                            >
+                                {kategori.map((item, index) => (
+                                    <React.Fragment key={'cc-' + index}>
+                                        <Col className="cards-main text-center">
+                                            <img className="image-main-cards mt-3" src={item.imageUrl}/>
+                                            <p className="text-center">{item.title}</p>
+                                        </Col>
+                                    </React.Fragment>
+                                ))}
+                            </Carousel>
                         </Col>
                     </Row>
                     <LihatSemua type="row"/>
@@ -105,14 +101,18 @@ export default class FrontPage extends React.Component {
 
                     <p className="font-section-heading text-center">Pengadaan</p>
                     <Row className="mb-3">
-                        {pengadaan.map((item, index) => (
-                            <React.Fragment key={'pe-' + index}>
-                                <Col className="cards-pengadaan mr-4 p-4 mt-1">
-                                    <p className="font-login-green font-weight-bold text-truncate">{item.title}</p>
-                                    <p>{item.description}</p>
-                                </Col>
-                            </React.Fragment>
-                        ))}
+                        {pengadaan.map((item, index) => {
+                            let colClass = "cards-pengadaan p-4 mt-1";
+                            if (index !== pengadaan.length - 1) colClass += " mr-4"
+                            return (
+                                <React.Fragment key={'pe-' + index}>
+                                    <Col className={colClass}>
+                                        <p className="font-login-green font-weight-bold">{item.title}</p>
+                                        <p className="text-justify">{item.description}</p>
+                                    </Col>
+                                </React.Fragment>
+                            )
+                        })}
                     </Row>
                     <LihatSemua type="row"/>
 
@@ -136,14 +136,14 @@ export default class FrontPage extends React.Component {
                         <Col sm={5}>
                             <p className="font-section-heading">Event</p>
                             <Row className="text-right">
-                                <img className="image-event" src={url_event}/>
+                                <img className="card-img image-event" src={url_event}/>
                             </Row>
                             <LihatSemua/>
                         </Col>
                     </Row>
 
+                    <Row className="mb-3"></Row>
 
-                    <Row className="mb-5"></Row>
                     <Row className="mb-5">
                         <Col sm={7}>
                             <p className="font-section-heading">Developer</p>
@@ -174,15 +174,16 @@ export default class FrontPage extends React.Component {
                             <LihatSemua/>
                         </Col>
 
-                        <Col sm={5}>
-                            <p className="font-section-heading">News</p>
-                            <Row className="text-right">
+                        <Col sm={5} className="">
+                            <p className="text-left font-section-heading pl-0 ml-0">News</p>
+                            <Row className="text-right p-2 border-news">
                                 <Row>
                                     <Col>
-                                        <div className="cards-news mt-1">
-                                            <img className="image-card-news" src={headline.imageUrl}/>
-                                        </div>
-                                        <div className="footer-cards-news text-center text-truncate">{headline.title}</div>
+                                        <Card>
+                                            <CardImg className="image-headline-news" src={headline.imageUrl}/>
+                                            <CardFooter
+                                                className="footer-cards-news text-center text-truncate">{headline.title}</CardFooter>
+                                        </Card>
                                     </Col>
                                 </Row>
                                 <Row className="cards-child-news text-center">
@@ -199,7 +200,7 @@ export default class FrontPage extends React.Component {
                                     ))}
                                 </Row>
                             </Row>
-                            <LihatSemua/>
+                            <LihatSemua className="mt-3"/>
                         </Col>
                     </Row>
 

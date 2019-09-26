@@ -46,8 +46,8 @@ class ModalLogin extends React.Component {
                             </Col>
 
                             <Col sm={7}>
-                                <div className="font-login-label pl-4">Belum punya akun JarKons?</div>
-                                <div className="font-login-green pl-4">Daftar</div>
+                                <div className="font-login-label pl-3">Belum punya akun JarKons?</div>
+                                <div className="font-login-green pl-3">Daftar</div>
                             </Col>
                         </Row>
 

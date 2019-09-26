@@ -40,24 +40,33 @@
 .btn-kategori {
     color: white;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: bolder;
     color: #ffffff;
 }
 
 .btn-masuk {
     background-color: #1eb25b !important;
     border: none !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    font-family: Lato;
 }
 
 .btn-navbar {
     border: solid 5px white !important;
     border-radius: 10% !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    font-family: Lato;
 }
 
 .btn-lang {
     width: 21px;
     height: 21px;
     object-fit: contain;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    font-family: Lato;
 }
 
 .font-white {
@@ -68,8 +77,13 @@
     color: #42b549;
 }
 
-.black-text {
-    font-black-text: black;
+.font-black {
+    color: black;
+}
+
+.font-lato-14 {
+    font-size: 14px !important;
+    font-family: Lato;
 }
 
 .font-top {
@@ -139,7 +153,7 @@
 }
 
 .image-card-news {
-    width: 471px;
+    width: 474px;
     height: 270px;
     border-radius: 5px;
 }
@@ -209,7 +223,7 @@
 }
 
 .cards-news {
-    width: 471px;
+    width: 474px;
     height: 270px;
     border-radius: 5px;
 }
@@ -223,7 +237,7 @@
 }
 
 .footer-cards-news {
-    width: 471px;
+    width: 474px;
     height: 70px;
     opacity: 0.85;
     border-radius: 5px;

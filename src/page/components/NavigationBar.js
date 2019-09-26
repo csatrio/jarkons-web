@@ -62,12 +62,18 @@ export default class NavigationBar extends React.Component {
                             </InputGroup>
 
                             <ButtonGroup className="col-sm-2 mr-3">
-                                <Button className="btn-masuk" size="sm" color="success" style={{marginRight: 10}}>Masuk</Button>
-                                <Button size="sm" color="success" className="btn-navbar">Daftar</Button>
+                                <Button className="btn-masuk" size="sm" color="success">Masuk</Button>
+                                <Button size="sm" color="success" className="btn-navbar mr-2">Daftar</Button>
                             </ButtonGroup>
 
-                            <ButtonGroup className="col-sm-2 font-white">
-                                <img src={LangId}/>ID&nbsp;&nbsp;<span className="border border-white"></span>&nbsp;&nbsp;<img src={LangId}/>EN
+                            <ButtonGroup className="col-sm-2 font-white font-weight-bold font-lato-14 ml-3">
+                                <img src={LangId}/>
+                                <div className="ml-1 mr-2">ID</div>
+                                <span className="border border-white"/>
+                                <span className="border border-white"/>
+                                &nbsp;&nbsp;
+                                <img className="ml-2" src={LangId}/>
+                                <div className="ml-1">EN</div>
                             </ButtonGroup>
                         </Collapse>
                     </div>

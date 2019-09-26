@@ -19,7 +19,7 @@ export default class Footer extends React.Component {
                             <div className="col-md-3 mt-md-0 mt-3">
                                 {/* Content */}
                                 <h5>Jarkons - Aplikasi Pencari Info Konstruksi No 1 Di Indonesia</h5>
-                                <p className="black-text font-footer-playstore">Aplikasi tersedia di:</p>
+                                <p className="font-black font-footer-playstore">Aplikasi tersedia di:</p>
                                 <img className="image-playstore-footer mb-2" src={google}/>
                             </div>
                             {/* Grid column */}

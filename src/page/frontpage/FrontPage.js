@@ -1,6 +1,6 @@
 import React from 'react';
-import NavigationBar from './NavigationBar';
-import Footer from './Footer'
+import NavigationBar from '../components/NavigationBar';
+import Footer from '../components/Footer'
 import {Card, CardFooter, CardImg, Col, Container, Row} from 'reactstrap'
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";

@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eff47659-10de-4419-855a-1c0851149856" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/css/KeuntunganIklan.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/page/KeuntunganIklan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/page/TentangJarkons.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/components/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/components/ModalDaftar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/components/ModalDaftar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/components/ModalLogin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/components/ModalLogin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/components/NavigationBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/components/NavigationBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/frontpage/FrontPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/frontpage/FrontPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/DaftarStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/DaftarStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/LoginStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/LoginStore.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -46,7 +37,7 @@
           <entry key="css" value="15" />
           <entry key="gitignore" value="1" />
           <entry key="jpg" value="1" />
-          <entry key="js" value="77" />
+          <entry key="js" value="78" />
           <entry key="json" value="6" />
           <entry key="png" value="8" />
           <entry key="svg" value="3" />
@@ -58,7 +49,7 @@
           <entry key="CSS" value="15" />
           <entry key="Image" value="9" />
           <entry key="JSON" value="6" />
-          <entry key="JavaScript" value="77" />
+          <entry key="JavaScript" value="78" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="SVG" value="3" />
           <entry key="TypeScript" value="1" />
@@ -72,7 +63,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="3182" />
-          <entry key="js" value="13383" />
+          <entry key="js" value="13490" />
           <entry key="json" value="65" />
           <entry key="txt" value="51" />
         </counts>
@@ -81,7 +72,7 @@
         <counts>
           <entry key="CSS" value="3182" />
           <entry key="JSON" value="65" />
-          <entry key="JavaScript" value="13383" />
+          <entry key="JavaScript" value="13490" />
           <entry key="PLAIN_TEXT" value="51" />
         </counts>
       </usages-collector>
@@ -104,11 +95,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/page/components/Footer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="68" column="29" lean-forward="true" selection-start-line="68" selection-end-line="69" />
+            <state relative-caret-position="195">
+              <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/page/TentangJarkons.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -146,8 +146,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Router.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+            <state relative-caret-position="120">
+              <caret line="20" column="63" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -155,11 +155,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/page/KeuntunganIklan.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+            <state relative-caret-position="135">
+              <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -280,11 +280,12 @@
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/page/TentangKami.js" />
         <option value="$PROJECT_DIR$/src/page/components/NavigationBar.js" />
-        <option value="$PROJECT_DIR$/src/Router.js" />
         <option value="$PROJECT_DIR$/src/page/frontpage/FrontPage.js" />
-        <option value="$PROJECT_DIR$/src/page/components/Footer.js" />
         <option value="$PROJECT_DIR$/src/css/KeuntunganIklan.css" />
         <option value="$PROJECT_DIR$/src/page/KeuntunganIklan.js" />
+        <option value="$PROJECT_DIR$/src/page/components/Footer.js" />
+        <option value="$PROJECT_DIR$/src/Router.js" />
+        <option value="$PROJECT_DIR$/src/page/TentangJarkons.js" />
       </list>
     </option>
   </component>
@@ -382,11 +383,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/page" />
       <recent name="$PROJECT_DIR$/src/assets/frontpage" />
       <recent name="$PROJECT_DIR$/src/store" />
       <recent name="$PROJECT_DIR$/src/page/components" />
       <recent name="$PROJECT_DIR$/src/assets/daftar" />
-      <recent name="$PROJECT_DIR$/src/mock" />
     </key>
     <key name="es6.move.members.recent.items">
       <recent name="$PROJECT_DIR$/src/page/frontpage/LihatSemua.js" />
@@ -435,7 +436,7 @@
       <workItem from="1569570419990" duration="599000" />
       <workItem from="1569917765485" duration="2194000" />
       <workItem from="1570001711198" duration="5609000" />
-      <workItem from="1570029168008" duration="8290000" />
+      <workItem from="1570029168008" duration="9187000" />
     </task>
     <task id="LOCAL-00001" summary="fix footer image margin bottom">
       <created>1569411454245</created>
@@ -455,7 +456,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92259000" />
+    <option name="totallyTimeSpent" value="93156000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="-1" width="1372" height="745" extended-state="6" />
@@ -494,9 +495,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="remove unused styles" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/eslint-config-react-app/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/eslint/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -734,30 +732,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/page/frontpage/FrontPage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="37" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/components/Footer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="68" column="29" lean-forward="true" selection-start-line="68" selection-end-line="69" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -783,11 +761,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/page/KeuntunganIklan.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+        <state relative-caret-position="135">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/components/Footer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="20" column="63" selection-start-line="20" selection-start-column="63" selection-end-line="20" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/TentangJarkons.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="31" column="19" lean-forward="true" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
         </state>
       </provider>
     </entry>

@@ -1,7 +1,8 @@
 import React from 'react'
 import {BrowserRouter as Router, Route, Switch, withRouter, NavLink} from 'react-router-dom'
-import FrontPage from './page/frontpage/FrontPage'
-import KeuntunganIklan from './page/KeuntunganIklan'
+import FrontPage from './page/frontpage/FrontPage';
+import TentangJarkons from './page/TentangJarkons';
+import KeuntunganIklan from './page/KeuntunganIklan';
 import {inject, observer} from "mobx-react";
 import {storeKeys} from "./store";
 import NavigationBar from './page/components/NavigationBar'
@@ -17,6 +18,7 @@ const RouterSwitch = () => (
     <Switch>
         <Route exact path="/" component={doInject(FrontPage)}/>
         <Route path="/keuntungan" component={doInject(KeuntunganIklan)}/>
+        <Route path="/about" component={doInject(TentangJarkons)}/>
     </Switch>
 )
 

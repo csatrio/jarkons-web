@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="united-kingdom_1_" data-name="united-kingdom (1)" viewBox="0 0 21 21">
+    <defs>
+        <style>
+            .cls-1{fill:#f0f0f0}.cls-2{fill:#0052b4}.cls-3{fill:#d80027}
+        </style>
+    </defs>
+    <circle id="Ellipse_1" cx="10.5" cy="10.5" r="10.5" class="cls-1" data-name="Ellipse 1"/>
+    <g id="Group_29" data-name="Group 29" transform="translate(.37 .37)">
+        <path id="Path_3" d="M10.671 100.142a10.711 10.711 0 0 0-1.852 3.741h5.592z" class="cls-2" data-name="Path 3" transform="translate(-8.819 -96.42)"/>
+        <path id="Path_4" d="M375.6 103.883a10.712 10.712 0 0 0-1.852-3.74l-3.74 3.74z" class="cls-2" data-name="Path 4" transform="translate(-355.338 -96.421)"/>
+        <path id="Path_5" d="M8.819 322.784a10.712 10.712 0 0 0 1.852 3.74l3.74-3.74z" class="cls-2" data-name="Path 5" transform="translate(-8.819 -309.987)"/>
+        <path id="Path_6" d="M326.523 10.671a10.712 10.712 0 0 0-3.741-1.852v5.592z" class="cls-2" data-name="Path 6" transform="translate(-309.985 -8.819)"/>
+        <path id="Path_7" d="M100.142 373.745a10.712 10.712 0 0 0 3.74 1.852v-5.592z" class="cls-2" data-name="Path 7" transform="translate(-96.42 -355.338)"/>
+        <path id="Path_8" d="M103.882 8.819a10.712 10.712 0 0 0-3.74 1.852l3.74 3.74z" class="cls-2" data-name="Path 8" transform="translate(-96.42 -8.819)"/>
+        <path id="Path_9" d="M322.783 375.6a10.712 10.712 0 0 0 3.74-1.852l-3.74-3.74z" class="cls-2" data-name="Path 9" transform="translate(-309.986 -355.338)"/>
+        <path id="Path_10" d="M370.005 322.784l3.74 3.74a10.711 10.711 0 0 0 1.852-3.74z" class="cls-2" data-name="Path 10" transform="translate(-355.338 -309.987)"/>
+    </g>
+    <g id="Group_30" data-name="Group 30">
+        <path id="Path_11" d="M20.911 9.13H11.87V.089a10.6 10.6 0 0 0-2.739 0V9.13H.089a10.6 10.6 0 0 0 0 2.739H9.13v9.042a10.6 10.6 0 0 0 2.739 0V11.87h9.042a10.6 10.6 0 0 0 0-2.739z" class="cls-3" data-name="Path 11"/>
+        <path id="Path_12" d="M322.783 322.783l4.8 4.8q.331-.331.632-.69l-4.107-4.107h-1.322z" class="cls-3" data-name="Path 12" transform="translate(-309.729 -309.729)"/>
+        <path id="Path_13" d="M79.777 322.784l-4.8 4.8q.331.331.69.632l4.107-4.107z" class="cls-3" data-name="Path 13" transform="translate(-71.831 -309.73)"/>
+        <path id="Path_14" d="M65.362 79.777l-4.8-4.8q-.331.331-.632.69l4.107 4.107h1.322z" class="cls-3" data-name="Path 14" transform="translate(-57.416 -71.831)"/>
+        <path id="Path_15" d="M322.783 65.363l4.8-4.8q-.331-.331-.69-.632l-4.107 4.107z" class="cls-3" data-name="Path 15" transform="translate(-309.729 -57.417)"/>
+    </g>
+</svg>

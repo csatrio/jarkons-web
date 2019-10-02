@@ -129,6 +129,10 @@
     color: #383746;
 }
 
+.font-pengadaan {
+    font-family: Lato;
+}
+
 .image-main-cards {
     width: 80px;
     height: 80px;
@@ -147,13 +151,13 @@
 }
 
 .image-event {
-    max-width: 464px;
+    max-width: 480px;
     max-height: 179px;
     border-radius: 15px !important;
 }
 
 .image-headline-news {
-    max-width: 474px;
+    max-width: 480px;
     max-height: 270px;
     border-radius: 5px;
 }
@@ -262,7 +266,7 @@
     border-radius: 20px;
     box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.16);
     background-color: #ffffff;
-    border-top:none;
+    border-top: none;
 }
 
 .cursor-pointer {
@@ -280,7 +284,65 @@
     line-height: 1.21;
     letter-spacing: normal;
     text-align: left;
-    max-width: 100%;
-    width: 100%;
+    /*max-width: 100%;*/
+    /*width: 100%;*/
 }
+
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.container {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto
+}
+
+/* Supaya lebih rapi */
+@media (max-width: 768px) {
+    html, body {
+        width: auto !important;
+        overflow-x: hidden !important;
+    }
+
+    .cards-179 {
+        width: auto;
+        height: auto;
+    }
+
+    .image-179 {
+        width: auto;
+        height: auto;
+    }
+
+    .footer-cards-179 {
+        width: auto;
+        height: auto;
+    }
+
+    .image-headline-news {
+        width: auto;
+        height: auto;
+    }
+
+    .image-child-news {
+        width: auto;
+        height: auto;
+    }
+
+    .cards-pengadaan {
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .searchbar {
+        width: auto;
+        height: auto;
+    }
+}
+
 

@@ -42,7 +42,7 @@ export default class FrontPage extends React.Component {
         const {LoginStore, DaftarStore} = this.props
         return (
             <React.Fragment>
-                <Container className="text-right">
+                <Container className="text-right container-fluid">
                     <a href="#" className="font-top mr-3">Keuntungan Iklan & Membership</a>
                     <a href="#" className="font-top mr-3">Lowongan Kerja</a>
                     <a href="#" className="font-top mr-3">Pusat Bantuan</a>
@@ -50,16 +50,16 @@ export default class FrontPage extends React.Component {
                 </Container>
 
                 <NavigationBar/>
-                <Container className="container-main">
+                <Container className="container-fluid">
 
-                    <Row>
-                        <Col>
+                    <Row className="p-0">
+                        <Col className="p-0">
                             <Carousel responsive={responsive}
                                       swipeable={true}
                                       draggable={false}
                                       showDots={true}
                                       containerClass="carousel-container"
-                                      itemClass="cards-main-carousel"
+                                      itemClass="cards-main-carousel mb-4"
                                       removeArrowOnDeviceType={["tablet", "mobile"]}
                             >
                                 {mainCarousel.map((item, index) => (
@@ -83,12 +83,12 @@ export default class FrontPage extends React.Component {
                                       draggable={false}
                                       showDots={true}
                                       containerClass="carousel-container"
-                                      itemClass="main-cards"
+                                      itemClass="cards-main"
                                       removeArrowOnDeviceType={["tablet", "mobile"]}
                             >
                                 {kategori.map((item, index) => (
                                     <React.Fragment key={'cc-' + index}>
-                                        <Col className="cards-main text-center">
+                                        <Col className="text-center">
                                             <img className="image-main-cards mt-3" src={item.imageUrl}/>
                                             <p className="text-center">{item.title}</p>
                                         </Col>
@@ -118,14 +118,14 @@ export default class FrontPage extends React.Component {
                     <LihatSemua type="row"/>
 
 
-                    <Row className="mb-5">
-                        <Col sm={7}>
+                    <Row className="mb-5 pl-0">
+                        <Col sm={7} className="pl-0">
                             <p className="font-section-heading">Kontraktor</p>
-                            <Row>
+                            <Row className="p-0">
                                 {kontraktor.map((item, index) => (
                                     <Col key={'ko-' + index}>
                                         <div className="cards-179 mt-1">
-                                            <img className="image-179" src={item.imageUrl}/>
+                                            <img className="card-img image-179" src={item.imageUrl}/>
                                         </div>
                                         <div className="footer-cards-179 text-center">{item.title}</div>
                                     </Col>
@@ -134,10 +134,10 @@ export default class FrontPage extends React.Component {
                             <LihatSemua/>
                         </Col>
 
-                        <Col sm={5}>
+                        <Col sm={5} className="pr-0">
                             <p className="font-section-heading">Event</p>
-                            <Row className="text-right">
-                                <img className="card-img image-event" src={url_event}/>
+                            <Row className="text-right pr-0">
+                                <img className="card-img image-event pr-0" src={url_event}/>
                             </Row>
                             <LihatSemua/>
                         </Col>
@@ -145,19 +145,18 @@ export default class FrontPage extends React.Component {
 
                     <Row className="mb-3"></Row>
 
-                    <Row className="mb-5">
-                        <Col sm={7}>
+                    <Row className="mb-5 pl-0">
+                        <Col sm={7} className="pl-0">
                             <p className="font-section-heading">Developer</p>
                             <Row className="mb-3">
                                 {developer.map((item, index) => (
                                     <Col key={'de-' + index}>
                                         <div className="cards-179 mt-1">
-                                            <img className="image-179" src={item.imageUrl}/>
+                                            <img className="card-img image-179" src={item.imageUrl}/>
                                         </div>
                                         <div className="footer-cards-179 text-center">{item.title}</div>
                                     </Col>
                                 ))}
-                                <Col>&nbsp;</Col>
                             </Row>
                             <LihatSemua/>
                             <p className="font-section-heading">Jual/Sewa Alat Berat</p>
@@ -165,17 +164,16 @@ export default class FrontPage extends React.Component {
                                 {alatberat.map((item, index) => (
                                     <Col key={'ab-' + index}>
                                         <div className="cards-179 mt-1">
-                                            <img className="image-179" src={item.imageUrl}/>
+                                            <img className="card-img image-179" src={item.imageUrl}/>
                                         </div>
                                         <div className="footer-cards-179 text-center">{item.title}</div>
                                     </Col>
                                 ))}
                             </Row>
-                            <Col>&nbsp;</Col>
                             <LihatSemua/>
                         </Col>
 
-                        <Col sm={5} className="">
+                        <Col sm={5} className="pr-0">
                             <p className="text-left font-section-heading pl-0 ml-0">News</p>
                             <Row className="text-right p-2 border-news">
                                 <Row>

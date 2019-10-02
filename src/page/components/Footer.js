@@ -12,7 +12,7 @@ export default class Footer extends React.Component {
             <React.Fragment>
                 <footer className="footer-main mt-5">
                     {/* Footer Links */}
-                    <div className="container-fluid text-center text-md-left">
+                    <div className="container-fluid text-center text-md-left pl-5 pr-5 pt-3 pb-3">
                         {/* Grid row */}
                         <div className="row">
                             {/* Grid column */}

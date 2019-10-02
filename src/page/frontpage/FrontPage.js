@@ -1,6 +1,4 @@
 import React from 'react';
-import NavigationBar from '../components/NavigationBar';
-import Footer from '../components/Footer'
 import {Card, CardFooter, CardImg, Col, Container, Row} from 'reactstrap'
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
@@ -14,8 +12,6 @@ import news, {headline} from "../../mock/news";
 import {mainCarousel} from "../../mock/maincarousel";
 import {kategori} from "../../mock/kategori";
 import {LihatSemua} from "./LihatSemua";
-import ModalLogin from "../components/ModalLogin";
-import ModalDaftar from "../components/ModalDaftar";
 
 const responsive = {
     superLargeDesktop: {
@@ -39,17 +35,8 @@ const responsive = {
 
 export default class FrontPage extends React.Component {
     render() {
-        const {LoginStore, DaftarStore} = this.props
         return (
             <React.Fragment>
-                <Container className="text-right container-fluid">
-                    <a href="#" className="font-top mr-3">Keuntungan Iklan & Membership</a>
-                    <a href="#" className="font-top mr-3">Lowongan Kerja</a>
-                    <a href="#" className="font-top mr-3">Pusat Bantuan</a>
-                    <a href="#" className="font-top">Download App</a>
-                </Container>
-
-                <NavigationBar/>
                 <Container className="container-fluid">
 
                     <Row className="p-0">
@@ -228,10 +215,6 @@ export default class FrontPage extends React.Component {
                     </Row>
 
                 </Container>
-
-                <Footer/>
-                <ModalLogin showModal={LoginStore.isShow}/>
-                <ModalDaftar showModal={DaftarStore.isShow}/>
             </React.Fragment>
         );
     }

@@ -1,15 +1,15 @@
 import React from 'react';
 import {
+    Button,
+    ButtonGroup,
     Collapse,
-    Navbar,
-    NavbarToggler,
-    NavbarBrand,
     Input,
     InputGroup,
     InputGroupAddon,
     InputGroupText,
-    ButtonGroup,
-    Button,
+    Navbar,
+    NavbarBrand,
+    NavbarToggler,
 } from 'reactstrap';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faListUl, faSearch} from '@fortawesome/free-solid-svg-icons'

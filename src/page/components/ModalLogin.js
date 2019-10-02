@@ -1,5 +1,5 @@
 import React from 'react';
-import {Modal, ModalBody, FormGroup, Label, Input, Row, Col, Button} from 'reactstrap';
+import {Button, Col, FormGroup, Input, Label, Modal, ModalBody, Row} from 'reactstrap';
 import {inject, observer} from "mobx-react";
 import {storeKeys} from "../../store";
 import '../../css/login.css'

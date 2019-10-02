@@ -9,7 +9,7 @@ class App extends React.Component {
     render() {
         return (
             <Provider {...stores}>
-                <Router/>
+                <Router {...stores}/>
             </Provider>
         );
     }

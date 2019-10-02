@@ -3,7 +3,9 @@ import google from '../../assets/frontpage/google.svg'
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
-import {faFacebookSquare, faTwitterSquare, faInstagram} from '@fortawesome/free-brands-svg-icons';
+import {faFacebookSquare, faInstagram, faTwitterSquare} from '@fortawesome/free-brands-svg-icons';
+import {NavLink} from 'react-router-dom'
+
 
 export default class Footer extends React.Component {
 
@@ -27,7 +29,7 @@ export default class Footer extends React.Component {
                             {/* Grid column */}
                             <div className="col-md-2 mb-md-0 mb-3">
                                 {/* Links */}
-                                <p className="font-footer font-weight-bold">Tentang Jarkons</p>
+                                <NavLink className="font-footer font-weight-bold" to="/about">Tentang Jarkons</NavLink>
                                 <p className="font-footer font-weight-bold">Follow us on</p>
                                 <div className="font-footer mb-1">
                                     <FontAwesomeIcon icon={faFacebookSquare} className="mr-1"/>Facebook

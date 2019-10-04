@@ -10,6 +10,8 @@ import {Container} from "reactstrap";
 import Footer from "./page/components/Footer";
 import ModalLogin from "./page/components/ModalLogin";
 import ModalDaftar from "./page/components/ModalDaftar";
+import SyaratKetentuan from './page/SyaratKetentuan';
+import KebijakanPrivasi from './page/KebijakanPrivasi';
 
 
 const doInject = (component) => withRouter(inject(...storeKeys)(observer(component)));
@@ -19,6 +21,8 @@ const RouterSwitch = () => (
         <Route exact path="/" component={doInject(FrontPage)}/>
         <Route path="/keuntungan" component={doInject(KeuntunganIklan)}/>
         <Route path="/about" component={doInject(TentangJarkons)}/>
+        <Route path="/syarat" component={doInject(SyaratKetentuan)}/>
+        <Route path="/privasi" component={doInject(KebijakanPrivasi)}/>
     </Switch>
 )
 

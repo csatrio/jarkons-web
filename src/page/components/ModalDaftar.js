@@ -2,8 +2,9 @@ import React from 'react';
 import {Button, Col, FormGroup, Input, Modal, ModalBody, Row} from 'reactstrap';
 import {inject, observer} from "mobx-react";
 import {storeKeys} from "../../store";
-import jarkonsImg from '../../assets/daftar/Logo.png'
-import '../../css/login.css'
+import jarkonsImg from '../../assets/daftar/Logo.png';
+import '../../css/login.css';
+import {Link} from 'react-router-dom';
 
 @inject(...storeKeys)
 @observer
@@ -73,8 +74,8 @@ class ModalDaftar extends React.Component {
                         <Row className="mt-3">
                             <Col className="font-login-label">
                                 <div className="font-login-label text-center">Dengan mendaftar saya menyetujui&nbsp;
-                                    <a href="#" className="font-login-green">syarat dan ketentuan</a>&nbsp;serta&nbsp;
-                                    <a href="#" className="font-login-green">kebijakan privasi</a>&nbsp;JarKons
+                                    <Link to="/syarat" className="font-login-green">syarat dan ketentuan</Link>&nbsp;serta&nbsp;
+                                    <Link to="/privasi" className="font-login-green">kebijakan privasi</Link>&nbsp;JarKons
 
                                 </div>
                             </Col>

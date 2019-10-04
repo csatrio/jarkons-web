@@ -45,7 +45,7 @@ export default class Footer extends React.Component {
                             {/* Grid column */}
                             <div className="col-md-2 mb-md-0 mb-3">
                                 {/* Links */}
-                                <p className="font-footer font-weight-bold">Kebijakan Privasi</p>
+                                <NavLink to="/privasi" className="font-footer font-weight-bold">Kebijakan Privasi</NavLink>
                             </div>
                             {/* Grid column */}
                             {/* Grid column */}

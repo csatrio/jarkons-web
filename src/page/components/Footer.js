@@ -4,10 +4,9 @@ import google from '../../assets/frontpage/google.svg'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import {faFacebookSquare, faInstagram, faTwitterSquare} from '@fortawesome/free-brands-svg-icons';
-import {NavLink} from 'react-router-dom'
+import {NavLink, withRouter} from 'react-router-dom'
 
-
-export default class Footer extends React.Component {
+class Footer extends React.Component {
 
     render() {
         return (
@@ -70,3 +69,5 @@ export default class Footer extends React.Component {
         );
     }
 }
+
+export default withRouter(Footer)

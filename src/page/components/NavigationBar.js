@@ -18,10 +18,11 @@ import LangId from '../../assets/frontpage/indonesia.png';
 import LangEn from '../../assets/frontpage/langEn.png';
 import {inject, observer} from "mobx-react";
 import {storeKeys} from "../../store";
+import {withRouter} from 'react-router-dom';
 
 @inject(...storeKeys)
 @observer
-export default class NavigationBar extends React.Component {
+class NavigationBar extends React.Component {
     state = {
         isOpen: false,
     };
@@ -40,7 +41,7 @@ export default class NavigationBar extends React.Component {
             <React.Fragment>
                 <Navbar light expand="md">
 
-                    <NavbarBrand href="/">
+                    <NavbarBrand onClick={()=>this.props.history.push('/')}>
                         <img src={Logo} className="Logo"/>
                     </NavbarBrand>
 
@@ -85,4 +86,6 @@ export default class NavigationBar extends React.Component {
         );
     }
 }
+
+export default withRouter(NavigationBar)
 

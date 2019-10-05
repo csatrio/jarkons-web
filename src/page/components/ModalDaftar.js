@@ -32,7 +32,7 @@ class ModalDaftar extends React.Component {
 
                         <Row className="mb-2">
                             <Col className="font-login-label">Sudah punya akun JarKons?</Col>
-                            <Col className="font-login-green text-right">Masuk</Col>
+                            <Col className="font-green text-right">Masuk</Col>
                         </Row>
 
                         <FormGroup>
@@ -74,8 +74,8 @@ class ModalDaftar extends React.Component {
                         <Row className="mt-3">
                             <Col className="font-login-label">
                                 <div className="font-login-label text-center">Dengan mendaftar saya menyetujui&nbsp;
-                                    <Link to="/syarat" className="font-login-green">syarat dan ketentuan</Link>&nbsp;serta&nbsp;
-                                    <Link to="/privasi" className="font-login-green">kebijakan privasi</Link>&nbsp;JarKons
+                                    <Link to="/syarat" className="font-green">syarat dan ketentuan</Link>&nbsp;serta&nbsp;
+                                    <Link to="/privasi" className="font-green">kebijakan privasi</Link>&nbsp;JarKons
 
                                 </div>
                             </Col>

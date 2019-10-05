@@ -18,7 +18,7 @@ class ModalLogin extends React.Component {
                 >
 
                     <ModalBody>
-                        <div className="font-login-green mb-2">Masuk ke akun anda</div>
+                        <div className="font-green mb-2">Masuk ke akun anda</div>
 
                         <FormGroup className="mb-3">
                             <Row>
@@ -30,7 +30,7 @@ class ModalLogin extends React.Component {
                         <FormGroup className="mb-4">
                             <Row>
                                 <Col className="font-login-label">Password</Col>
-                                <Col className="font-login-label text-right font-login-green">Lupa Kata Sandi</Col>
+                                <Col className="font-login-label text-right font-green">Lupa Kata Sandi</Col>
                             </Row>
                             <Input type="password" className="input-login"/>
                         </FormGroup>
@@ -49,7 +49,7 @@ class ModalLogin extends React.Component {
 
                             <Col sm={7}>
                                 <div className="font-login-label pl-3">Belum punya akun JarKons?</div>
-                                <div className="font-login-green pl-3">Daftar</div>
+                                <div className="font-green pl-3">Daftar</div>
                             </Col>
                         </Row>
 

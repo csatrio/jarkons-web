@@ -95,7 +95,7 @@ export default class FrontPage extends React.Component {
                             return (
                                 <React.Fragment key={'pe-' + index}>
                                     <Col className={colClass}>
-                                        <p className="font-login-green font-weight-bold">{item.title}</p>
+                                        <p className="font-green font-weight-bold">{item.title}</p>
                                         <p className="text-justify">{item.description}</p>
                                     </Col>
                                 </React.Fragment>
@@ -179,7 +179,7 @@ export default class FrontPage extends React.Component {
                                                 <Card>
                                                     <CardImg src={item.imageUrl} className="image-child-news"/>
                                                     <CardFooter
-                                                        className="bg-white font-login-green text-truncate">{item.title}</CardFooter>
+                                                        className="bg-white font-green text-truncate">{item.title}</CardFooter>
                                                 </Card>
                                             </Col>
                                         </React.Fragment>
@@ -205,8 +205,8 @@ export default class FrontPage extends React.Component {
                                 {testimonial.map((testi, index) => (
                                     <React.Fragment key={'te-' + index}>
                                         <div className="font-weight-bold mb-2">{testi.name}</div>
-                                        <div className="font-login-green">{testi.jobTitle}</div>
-                                        <div className="font-login-green">{testi.company}</div>
+                                        <div className="font-green">{testi.jobTitle}</div>
+                                        <div className="font-green">{testi.company}</div>
                                         <p className="text-justify mt-3">{testi.content}</p>
                                     </React.Fragment>
                                 ))}

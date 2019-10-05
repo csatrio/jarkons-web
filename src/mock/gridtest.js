@@ -1,9 +1,8 @@
 import React from 'react';
 import Grid from '../page/components/Grid';
-import {Card, CardImg, Row, Col} from 'reactstrap'
+import {Card, CardImg, Col, Row} from 'reactstrap'
 import SearchFilter from '../page/components/SearchFilter';
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faStar} from '@fortawesome/free-solid-svg-icons';
+import Rating from "../page/components/Rating";
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -21,7 +20,6 @@ const _item = {
 export default class GridTest extends React.Component {
 
     gridRender = (item) => {
-        const roundedRating = Math.round(item.rating);
         return (
             <React.Fragment>
                 <Card className="cards-product mb-2 text-center mt-0">
@@ -31,10 +29,7 @@ export default class GridTest extends React.Component {
                     <div className="font-lato-14 font-green">{item.productName}</div>
                     <div className="font-lato-12">{item.companyName}</div>
                     <div>
-                        {Array.apply(null, {length: 5}).map((e, index) => {
-                            const starColor = index < roundedRating ? '#ffd500' : '#ebe9e4';
-                            return <FontAwesomeIcon icon={faStar} color={starColor}/>
-                        })}
+                        <Rating maxRating={5} rating={item.rating}/>
                         <div className="d-inline-flex ml-2 font-lato-12">{item.rating}</div>
                     </div>
                 </div>
@@ -47,7 +42,7 @@ export default class GridTest extends React.Component {
         for (let i = 1; i <= 31; i++) {
             const itemCopy = Object.assign({}, _item);
             data.push(itemCopy);
-            itemCopy.rating = Number(`${getRandomInt(1, 4)}.${getRandomInt(1,9)}`)
+            itemCopy.rating = Number(`${getRandomInt(1, 4)}.${getRandomInt(1, 9)}`)
         }
         return (
             <React.Fragment>

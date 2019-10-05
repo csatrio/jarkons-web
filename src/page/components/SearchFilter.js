@@ -29,33 +29,49 @@ export default class SearchFilter extends React.Component {
 
     render() {
         const {kategoriClicked, lokasiClicked, ratingClicked} = this.state
+        const sectionClass = "font-lato-14 mb-2";
+        const borderClass = "border-bottom border-dark";
+        const clickerClass = "fa-pull-right";
+        const sectionHeaderClass = "d-inline-flex mb-0 font-weight-bold";
         return (
             <React.Fragment>
                 <Card className="p-2">
-                    <div>Kategori <Clicker clicked={kategoriClicked} className="fa-pull-right"
+                    <div className={sectionClass}>
+                        <p className={sectionHeaderClass}>Kategori</p>
+                        <Clicker clicked={kategoriClicked} className={clickerClass}
                                            onClick={() => this.toggleClick('kategoriClicked')}/>
+                        <div className={borderClass}></div>
+                        <Collapse isOpen={kategoriClicked}>
+                            <div className="font-lato-12">Kontraktor</div>
+                            <div className="font-lato-12">Tenaga Ahli</div>
+                            <div className="font-lato-12">Supplier</div>
+                        </Collapse>
                     </div>
-                    <Collapse isOpen={kategoriClicked}>
-                        <div>Kontraktor</div>
-                        <div>Tenaga Ahli</div>
-                        <div>Supplier</div>
-                    </Collapse>
-                    <div>Lokasi <Clicker clicked={lokasiClicked} className="fa-pull-right"
+
+                    <div className={sectionClass}>
+                        <p className={sectionHeaderClass}>Lokasi</p>
+                        <Clicker clicked={lokasiClicked} className={clickerClass}
                                          onClick={() => this.toggleClick('lokasiClicked')}/>
+                        <div className={borderClass}></div>
+                        <Collapse isOpen={lokasiClicked}>
+                            <div className="font-lato-12">Tangerang</div>
+                            <div className="font-lato-12">Jakarta</div>
+                            <div className="font-lato-12">Bogor</div>
+                        </Collapse>
                     </div>
-                    <Collapse isOpen={lokasiClicked}>
-                        <div>Tangerang</div>
-                        <div>Jakarta</div>
-                        <div>Bogor</div>
-                    </Collapse>
-                    <div>Rating <Clicker clicked={ratingClicked} className="fa-pull-right"
+
+                    <div className={sectionClass}>
+                        <p className={sectionHeaderClass}>Rating</p>
+                        <Clicker clicked={ratingClicked} className={clickerClass}
                                          onClick={() => this.toggleClick('ratingClicked')}/>
+                        <div className={borderClass}></div>
+                        <Collapse isOpen={ratingClicked}>
+                            <div className="font-lato-12">1</div>
+                            <div className="font-lato-12">2</div>
+                            <div className="font-lato-12">3</div>
+                        </Collapse>
                     </div>
-                    <Collapse isOpen={ratingClicked}>
-                        <div>1</div>
-                        <div>2</div>
-                        <div>3</div>
-                    </Collapse>
+
                 </Card>
             </React.Fragment>
         )

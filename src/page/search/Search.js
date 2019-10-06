@@ -1,12 +1,21 @@
 import React from 'react';
-import Grid from '../page/components/Grid';
-import {Card, CardImg, Col, Row, Button} from 'reactstrap'
-import FilterItems from '../page/components/FilterItems';
-import Rating from "../page/components/Rating";
-import perusahaan from '../mock/search_perusahaan';
+import Grid from '../../page/components/Grid';
+import {Card, CardImg, Col, Row, Button, TabContent, TabPane, Nav, NavItem, NavLink, Media} from 'reactstrap'
+import FilterItems from '../../page/components/FilterItems';
+import Rating from "../../page/components/Rating";
+import company from '../../assets/search/company.svg';
+import product from '../../assets/search/product.svg';
+import perusahaan from '../../mock/search_perusahaan';
 
+export default class Search extends React.Component {
 
-export default class GridTest extends React.Component {
+    state = {
+        activeTab: '1'
+    }
+
+    isActive = (tab) => this.state.activeTab === tab
+
+    toggle = (tab) => this.setState({activeTab: tab})
 
     gridRender = (item) => {
         return (
@@ -27,10 +36,28 @@ export default class GridTest extends React.Component {
     }
 
     render() {
-
+        const tabClass = "d-inline-flex cursor-pointer"
         const sectionClass = 'font-lato-14 border-bottom border-dark'
         return (
             <React.Fragment>
+                <Row className="m2">
+                    <Col className="ml-4 mr-4 border-bottom">
+                        <div className="d-inline-flex cursor-pointer mr-2" onClick={() => this.toggle('1')}>
+                            <Media className="d-inline-flex cursor-pointer" width={33} height={33} src={company}
+                                   onClick={() => this.toggle('1')}/>
+                        </div>
+                        <div className="d-inline-flex font-weight-bold font-lato-14 mr-3 cursor-pointer"
+                             onClick={() => this.toggle('2')}>Perusahaan
+                        </div>
+                        <div className="d-inline-flex cursor-pointer" onClick={() => this.toggle('2')}>
+                            <Media className="d-inline-flex" width={33} height={33} src={product}/>
+                        </div>
+                        <div className="d-inline-flex font-weight-bold font-lato-14 cursor-pointer font-green"
+                             onClick={() => this.toggle('2')}>Produk
+                        </div>
+                    </Col>
+                </Row>
+
                 <Row className="m-2">
                     <Col sm={2}>
                         <Card className="p-2">
@@ -64,7 +91,17 @@ export default class GridTest extends React.Component {
                         </Card>
                     </Col>
                     <Col sm={10}>
-                        <Grid itemPerRow={4} data={perusahaan(31)} renderCallback={this.gridRender}/>
+
+
+                        <TabContent activeTab={this.state.activeTab}>
+                            <TabPane tabId='1'>
+                                <Grid itemPerRow={4} data={perusahaan(31)} renderCallback={this.gridRender}/>
+                            </TabPane>
+
+                            <TabPane tabId='2'>
+                                <Grid itemPerRow={4} data={perusahaan(8)} renderCallback={this.gridRender}/>
+                            </TabPane>
+                        </TabContent>
                     </Col>
                 </Row>
             </React.Fragment>

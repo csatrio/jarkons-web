@@ -41,7 +41,7 @@ class NavigationBar extends React.Component {
             <React.Fragment>
                 <Navbar light expand="md">
 
-                    <NavbarBrand onClick={()=>this.props.history.push('/')}>
+                    <NavbarBrand onClick={()=>this.props.history.push('/')} className="cursor-pointer">
                         <img src={Logo} className="Logo"/>
                     </NavbarBrand>
 

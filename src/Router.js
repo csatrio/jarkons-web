@@ -13,6 +13,7 @@ import ModalDaftar from "./page/components/ModalDaftar";
 import SyaratKetentuan from './page/SyaratKetentuan';
 import KebijakanPrivasi from './page/KebijakanPrivasi';
 import GridTest from "./mock/gridtest";
+import Search from './page/search/Search';
 
 
 const doInject = (component) => withRouter(inject(...storeKeys)(observer(component)));
@@ -25,6 +26,7 @@ const RouterSwitch = () => (
         <Route path="/syarat" component={doInject(SyaratKetentuan)}/>
         <Route path="/privasi" component={doInject(KebijakanPrivasi)}/>
         <Route path="/grid" component={doInject(GridTest)}/>
+        <Route path="/search" component={doInject(Search)}/>
     </Switch>
 )
 

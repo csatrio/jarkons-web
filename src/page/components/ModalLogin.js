@@ -3,13 +3,14 @@ import {Button, Col, FormGroup, Input, Label, Modal, ModalBody, Row} from 'react
 import {inject, observer} from "mobx-react";
 import {storeKeys} from "../../store";
 import '../../css/login.css'
+import {withRouter} from "react-router-dom";
 
 @inject(...storeKeys)
 @observer
 class ModalLogin extends React.Component {
 
     render() {
-        const {className, LoginStore} = this.props
+        const {className, LoginStore, DaftarStore} = this.props
         return (
             <div>
                 <Modal isOpen={LoginStore.isShow}
@@ -49,7 +50,8 @@ class ModalLogin extends React.Component {
 
                             <Col sm={7}>
                                 <div className="font-login-label pl-3">Belum punya akun JarKons?</div>
-                                <div className="font-green pl-3">Daftar</div>
+                                <div className="font-green pl-3 cursor-pointer"
+                                     onClick={()=>{this.props.history.push('/signup'); LoginStore.close()}}>Daftar</div>
                             </Col>
                         </Row>
 
@@ -60,4 +62,4 @@ class ModalLogin extends React.Component {
     }
 }
 
-export default ModalLogin;
+export default withRouter(ModalLogin);

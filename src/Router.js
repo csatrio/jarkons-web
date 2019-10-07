@@ -9,11 +9,11 @@ import NavigationBar from './page/components/NavigationBar'
 import {Container} from "reactstrap";
 import Footer from "./page/components/Footer";
 import ModalLogin from "./page/components/ModalLogin";
-import ModalDaftar from "./page/components/ModalDaftar";
 import SyaratKetentuan from './page/SyaratKetentuan';
 import KebijakanPrivasi from './page/KebijakanPrivasi';
 import GridTest from "./mock/gridtest";
 import Search from './page/search/Search';
+import Signup from './page/Signup';
 
 
 const doInject = (component) => withRouter(inject(...storeKeys)(observer(component)));
@@ -27,6 +27,7 @@ const RouterSwitch = () => (
         <Route path="/privasi" component={doInject(KebijakanPrivasi)}/>
         <Route path="/grid" component={doInject(GridTest)}/>
         <Route path="/search" component={doInject(Search)}/>
+        <Route path="/signup" component={doInject(Signup)}/>
     </Switch>
 )
 
@@ -47,7 +48,6 @@ export default (props) => {
 
             <Footer/>
             <ModalLogin showModal={LoginStore.isShow}/>
-            <ModalDaftar showModal={DaftarStore.isShow}/>
         </Router>
     )
 }

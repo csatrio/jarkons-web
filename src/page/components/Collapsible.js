@@ -5,7 +5,7 @@ import {faAngleUp, faAngleDown} from '@fortawesome/free-solid-svg-icons';
 
 const coalesce = (value, defaultValue) => (typeof(value) !== "undefined") ? value : defaultValue;
 
-class FilterItems extends React.Component {
+class Collapsible extends React.Component {
     state = {clicked: false}
 
     render() {
@@ -31,4 +31,4 @@ class FilterItems extends React.Component {
 
 }
 
-export default FilterItems
+export default Collapsible

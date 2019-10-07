@@ -49,7 +49,8 @@ class NavigationBar extends React.Component {
                     <NavbarToggler onClick={this.toggle}/>
                     <Collapse isOpen={this.state.isOpen} navbar>
 
-                        <div className="btn-kategori col-sm-1">
+                        <div className="btn-kategori cursor-pointer col-sm-1"
+                        onClick={()=>this.props.history.push('/search')}>
                             <FontAwesomeIcon icon={faListUl}/>
                             &nbsp;&nbsp;Kategori
                         </div>
@@ -67,7 +68,7 @@ class NavigationBar extends React.Component {
                             <Button className="btn-masuk" size="sm" color="success"
                                     onClick={LoginStore.toggle}>Masuk</Button>
                             <Button size="sm" color="success" className="btn-navbar mr-2"
-                                    onClick={DaftarStore.toggle}>Daftar</Button>
+                                    onClick={()=>this.props.history.push('/signup')}>Daftar</Button>
                         </ButtonGroup>
 
                         <ButtonGroup className="col-sm-2 font-white font-weight-bold font-lato-14 ml-3">

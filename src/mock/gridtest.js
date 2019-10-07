@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '../page/components/Grid';
 import {Card, CardImg, Col, Row, Button} from 'reactstrap'
-import FilterItems from '../page/components/FilterItems';
+import Collapsible from '../page/components/Collapsible';
 import Rating from "../page/components/Rating";
 import perusahaan from '../mock/search_perusahaan';
 
@@ -34,27 +34,27 @@ export default class GridTest extends React.Component {
                 <Row className="m-2">
                     <Col sm={2}>
                         <Card className="p-2">
-                            <FilterItems section="Kategori" className="mb-2" sectionClass={sectionClass}>
+                            <Collapsible section="Kategori" className="mb-2" sectionClass={sectionClass}>
                                 <div className="font-lato-12">Kontraktor</div>
                                 <div className="font-lato-12">SubKontraktor</div>
                                 <div className="font-lato-12">Tenaga Ahli</div>
-                            </FilterItems>
+                            </Collapsible>
 
-                            <FilterItems section="Lokasi" className="mb-2" sectionClass={sectionClass}>
+                            <Collapsible section="Lokasi" className="mb-2" sectionClass={sectionClass}>
                                 <div className="font-lato-12">Tangerang</div>
                                 <div className="font-lato-12">Jakarta</div>
                                 <div className="font-lato-12">Serang</div>
                                 <div className="font-lato-12">Bali</div>
-                            </FilterItems>
+                            </Collapsible>
 
-                            <FilterItems section="Rating" className="mb-2" sectionClass={sectionClass}>
+                            <Collapsible section="Rating" className="mb-2" sectionClass={sectionClass}>
                                 <div className="cursor-pointer"><Rating maxRating={5} rating={5}/></div>
                                 <div className="cursor-pointer"><Rating maxRating={5} rating={4}/></div>
                                 <div className="cursor-pointer"><Rating maxRating={5} rating={3}/></div>
                                 <div className="cursor-pointer"><Rating maxRating={5} rating={2}/></div>
                                 <div className="cursor-pointer"><Rating maxRating={5} rating={1}/></div>
                                 <div className="cursor-pointer"><Rating maxRating={5} rating={0}/></div>
-                            </FilterItems>
+                            </Collapsible>
 
                             <Row>
                                 <Col><Button className="fa-pull-left btn-success rounded-pill" size="sm">Reset</Button></Col>

@@ -282,6 +282,10 @@
     border-top: none;
 }
 
+.border-bottom-green {
+    border-bottom: 3px solid green!important;
+}
+
 .cursor-pointer {
     cursor: pointer;
 }

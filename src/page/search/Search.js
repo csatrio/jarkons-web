@@ -7,15 +7,22 @@ import company from '../../assets/search/company.svg';
 import product from '../../assets/search/product.svg';
 import perusahaan from '../../mock/search_perusahaan';
 
+const tabStyle = {
+    display: 'flex',
+    alignItems: 'flex-end'
+}
+
 export default class Search extends React.Component {
 
     state = {
         activeTab: '1'
     }
 
-    isActive = (tab) => this.state.activeTab === tab
+    tabDivClass = 'd-inline-flex cursor-pointer font-lato-14 font-weight-bold p-1'
 
+    isActive = (tab) => this.state.activeTab === tab
     toggle = (tab) => this.setState({activeTab: tab})
+    tabClass = (tab) => this.isActive(tab) ? this.tabDivClass + ' border-bottom-green' : this.tabDivClass
 
     gridRender = (item) => {
         return (
@@ -35,29 +42,31 @@ export default class Search extends React.Component {
         )
     }
 
+    PageTab = (props) => (
+        <React.Fragment>
+            <Row className="m2">
+                <Col className="ml-4 mr-4 border-bottom">
+
+                    <div className={this.tabClass('1')} onClick={() => this.toggle('1')}>
+                        <Media className="mr-1" width={33} height={33} src={company}/>
+                        <div style={tabStyle} className="mr-2">Perusahaan</div>
+                    </div>
+
+                    <div className={this.tabClass('2')} onClick={() => this.toggle('2')}>
+                        <Media className="mr-1" width={33} height={33} src={product}/>
+                        <div style={tabStyle}>Produk</div>
+                    </div>
+                </Col>
+            </Row>
+        </React.Fragment>
+    )
+
     render() {
         const tabClass = "d-inline-flex cursor-pointer"
         const sectionClass = 'font-lato-14 border-bottom border-dark'
         return (
             <React.Fragment>
-                <Row className="m2">
-                    <Col className="ml-4 mr-4 border-bottom">
-                        <div className="d-inline-flex cursor-pointer mr-2" onClick={() => this.toggle('1')}>
-                            <Media className="d-inline-flex cursor-pointer" width={33} height={33} src={company}
-                                   onClick={() => this.toggle('1')}/>
-                        </div>
-                        <div className="d-inline-flex font-weight-bold font-lato-14 mr-3 cursor-pointer"
-                             onClick={() => this.toggle('2')}>Perusahaan
-                        </div>
-                        <div className="d-inline-flex cursor-pointer" onClick={() => this.toggle('2')}>
-                            <Media className="d-inline-flex" width={33} height={33} src={product}/>
-                        </div>
-                        <div className="d-inline-flex font-weight-bold font-lato-14 cursor-pointer font-green"
-                             onClick={() => this.toggle('2')}>Produk
-                        </div>
-                    </Col>
-                </Row>
-
+                <this.PageTab/>
                 <Row className="m-2">
                     <Col sm={2}>
                         <Card className="p-2">

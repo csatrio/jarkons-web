@@ -6,6 +6,7 @@ import Rating from "../../page/components/Rating";
 import company from '../../assets/search/company.svg';
 import product from '../../assets/search/product.svg';
 import perusahaan from '../../mock/search_perusahaan';
+import Paginations from '../components/Paginations';
 
 const tabStyle = {
     display: 'flex',
@@ -15,7 +16,9 @@ const tabStyle = {
 export default class Search extends React.Component {
 
     state = {
-        activeTab: '1'
+        activeTab: 'tabPerusahaan',
+        dataPerusahaan: [],
+        dataProduk: [],
     }
 
     tabDivClass = 'd-inline-flex cursor-pointer font-lato-14 font-weight-bold p-1'
@@ -24,7 +27,86 @@ export default class Search extends React.Component {
     toggle = (tab) => this.setState({activeTab: tab})
     tabClass = (tab) => this.isActive(tab) ? this.tabDivClass + ' border-bottom-green' : this.tabDivClass
 
-    gridRender = (item) => {
+    constructor(props) {
+        super(props);
+        this.kategori = React.createRef();
+        this.lokasi = React.createRef();
+        this.rating = React.createRef();
+    }
+
+    componentDidMount(){
+        this.setState({
+            dataPerusahaan: perusahaan(16),
+            dataProduk: perusahaan(10)
+        })
+    }
+
+    resetFilter = () => {
+        this.kategori.current.reset()
+        this.lokasi.current.reset()
+        this.rating.current.reset()
+    }
+
+    PageTab = () => (
+        <React.Fragment>
+            <Row className="m2">
+                <Col className="ml-4 mr-4">
+
+                    <div className={this.tabClass('tabPerusahaan')} onClick={() => this.toggle('tabPerusahaan')}>
+                        <Media className="mr-1" width={33} height={33} src={company}/>
+                        <div style={tabStyle} className="mr-2">Perusahaan</div>
+                    </div>
+
+                    <div className={this.tabClass('tabProduk')} onClick={() => this.toggle('tabProduk')}>
+                        <Media className="mr-1" width={33} height={33} src={product}/>
+                        <div style={tabStyle}>Produk</div>
+                    </div>
+                </Col>
+            </Row>
+        </React.Fragment>
+    )
+
+    FilterCard = () => {
+        const sectionClass = 'font-lato-14 border-bottom border-dark'
+        const filterItemClass = 'font-lato-12 cursor-pointer'
+        return (
+            <Card className="p-2">
+                <Collapsible section="Kategori" className="mb-2" sectionClass={sectionClass}
+                             ref={this.kategori}>
+                    <div className={filterItemClass}>Kontraktor</div>
+                    <div className={filterItemClass}>SubKontraktor</div>
+                    <div className={filterItemClass}>Tenaga Ahli</div>
+                </Collapsible>
+
+                <Collapsible section="Lokasi" className="mb-2" sectionClass={sectionClass}
+                             ref={this.lokasi}>
+                    <div className={filterItemClass}>Tangerang</div>
+                    <div className={filterItemClass}>Jakarta</div>
+                    <div className={filterItemClass}>Serang</div>
+                    <div className={filterItemClass}>Bali</div>
+                </Collapsible>
+
+                <Collapsible section="Rating" className="mb-2" sectionClass={sectionClass}
+                             ref={this.rating} activeClass="border border-success">
+                    <div className={filterItemClass}><Rating maxRating={5} rating={5}/></div>
+                    <div className={filterItemClass}><Rating maxRating={5} rating={4}/></div>
+                    <div className={filterItemClass}><Rating maxRating={5} rating={3}/></div>
+                    <div className={filterItemClass}><Rating maxRating={5} rating={2}/></div>
+                    <div className={filterItemClass}><Rating maxRating={5} rating={1}/></div>
+                    <div className={filterItemClass}><Rating maxRating={5} rating={0}/></div>
+                </Collapsible>
+
+                <Row>
+                    <Col><Button className="fa-pull-left btn-success rounded-pill"
+                                 size="sm"
+                                 onClick={this.resetFilter}>Reset</Button></Col>
+                    <Col></Col>
+                </Row>
+            </Card>
+        )
+    }
+
+    renderPerusahaan = (item) => {
         return (
             <React.Fragment>
                 <Card className="cards-product mb-2 text-center mt-0">
@@ -42,28 +124,22 @@ export default class Search extends React.Component {
         )
     }
 
-    PageTab = () => (
-        <React.Fragment>
-            <Row className="m2">
-                <Col className="ml-4 mr-4">
-
-                    <div className={this.tabClass('1')} onClick={() => this.toggle('1')}>
-                        <Media className="mr-1" width={33} height={33} src={company}/>
-                        <div style={tabStyle} className="mr-2">Perusahaan</div>
-                    </div>
-
-                    <div className={this.tabClass('2')} onClick={() => this.toggle('2')}>
-                        <Media className="mr-1" width={33} height={33} src={product}/>
-                        <div style={tabStyle}>Produk</div>
-                    </div>
-                </Col>
-            </Row>
-        </React.Fragment>
-    )
+    renderProduk = (item) => {
+        return (
+            <React.Fragment>
+                <Card className="cards-product mb-2 text-center mt-0">
+                    <CardImg src={item.imageUrl}/>
+                </Card>
+                <div className="ml-1 mb-5">
+                    <div className="font-lato-14 font-green">{item.productName}</div>
+                    <div className="font-lato-12">{item.companyName}</div>
+                </div>
+            </React.Fragment>
+        )
+    }
 
     render() {
-        const tabClass = "d-inline-flex cursor-pointer"
-        const sectionClass = 'font-lato-14 border-bottom border-dark'
+        const {dataPerusahaan, dataProduk} = this.state
         return (
             <React.Fragment>
                 <this.PageTab/>
@@ -72,46 +148,21 @@ export default class Search extends React.Component {
                 </Row>
                 <Row className="m-2">
                     <Col sm={2}>
-                        <Card className="p-2">
-                            <Collapsible section="Kategori" className="mb-2" sectionClass={sectionClass}>
-                                <div className="font-lato-12">Kontraktor</div>
-                                <div className="font-lato-12">SubKontraktor</div>
-                                <div className="font-lato-12">Tenaga Ahli</div>
-                            </Collapsible>
-
-                            <Collapsible section="Lokasi" className="mb-2" sectionClass={sectionClass}>
-                                <div className="font-lato-12">Tangerang</div>
-                                <div className="font-lato-12">Jakarta</div>
-                                <div className="font-lato-12">Serang</div>
-                                <div className="font-lato-12">Bali</div>
-                            </Collapsible>
-
-                            <Collapsible section="Rating" className="mb-2" sectionClass={sectionClass}>
-                                <div className="cursor-pointer"><Rating maxRating={5} rating={5}/></div>
-                                <div className="cursor-pointer"><Rating maxRating={5} rating={4}/></div>
-                                <div className="cursor-pointer"><Rating maxRating={5} rating={3}/></div>
-                                <div className="cursor-pointer"><Rating maxRating={5} rating={2}/></div>
-                                <div className="cursor-pointer"><Rating maxRating={5} rating={1}/></div>
-                                <div className="cursor-pointer"><Rating maxRating={5} rating={0}/></div>
-                            </Collapsible>
-
-                            <Row>
-                                <Col><Button className="fa-pull-left btn-success rounded-pill" size="sm">Reset</Button></Col>
-                                <Col></Col>
-                            </Row>
-
-                        </Card>
+                        <this.FilterCard/>
                     </Col>
                     <Col sm={10}>
 
-
                         <TabContent activeTab={this.state.activeTab}>
-                            <TabPane tabId='1'>
-                                <Grid itemPerRow={4} data={perusahaan(31)} renderCallback={this.gridRender}/>
+                            <TabPane tabId="tabPerusahaan">
+                                <Grid itemPerRow={4} data={dataPerusahaan} renderCallback={this.renderPerusahaan}/>
+                                <Paginations callback={(e) => alert(`clicked ${e}`)} last_page={10}
+                                             className="fa-pull-right"/>
                             </TabPane>
 
-                            <TabPane tabId='2'>
-                                <Grid itemPerRow={4} data={perusahaan(3)} renderCallback={this.gridRender}/>
+                            <TabPane tabId="tabProduk">
+                                <Grid itemPerRow={4} data={dataProduk} renderCallback={this.renderProduk}/>
+                                <Paginations callback={(e) => alert(`clicked ${e}`)} last_page={2}
+                                             className="fa-pull-right"/>
                             </TabPane>
                         </TabContent>
                     </Col>

@@ -10,7 +10,7 @@ import {withRouter} from "react-router-dom";
 class ModalLogin extends React.Component {
 
     render() {
-        const {className, LoginStore, DaftarStore} = this.props
+        const {className, LoginStore} = this.props
         return (
             <div>
                 <Modal isOpen={LoginStore.isShow}

@@ -10,12 +10,10 @@ function getRandomInt(min, max) {
 const _item = {
     //imageUrl: 'https://mmgmemphis.com/wp-content/uploads/2018/08/MemphisIR-LOGO-tagline-black-font-200x141-300x200.png',
     imageUrl: sample_img,
-    productName: 'Kolor',
-    companyName: 'PT Kolor Jaya Perkasa',
+    productName: 'Semen',
+    companyName: 'PT Semen Kujang',
     rating: 5,
 }
-
-
 
 
 export default function (size) {

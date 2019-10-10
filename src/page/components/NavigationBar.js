@@ -36,7 +36,7 @@ class NavigationBar extends React.Component {
     }
 
     render() {
-        const {LoginStore, DaftarStore} = this.props
+        const {LoginStore} = this.props
         return (
             <React.Fragment>
                 <Navbar light expand="md">

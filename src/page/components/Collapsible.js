@@ -1,15 +1,18 @@
 import React from 'react';
 import {Collapse} from 'reactstrap';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faAngleUp, faAngleDown} from '@fortawesome/free-solid-svg-icons';
-
-const coalesce = (value, defaultValue) => (typeof(value) !== "undefined") ? value : defaultValue;
+import {faAngleDown, faAngleUp} from '@fortawesome/free-solid-svg-icons';
+import {coalesce} from "../../util";
 
 class Collapsible extends React.Component {
-    state = {clicked: false}
+    state = {
+        clicked: false,
+        activeChild: -1
+    }
 
     render() {
-        const {children, section, sectionClass, clickerClass, clickerIconUp, clickerIconDown, className} = this.props;
+        const {children, section, sectionClass, clickerClass, clickerIconUp, clickerIconDown, className, activeClass} = this.props;
+        const _activeClass = typeof(activeClass) === 'undefined' ? ' font-green' : ' ' + activeClass;
         const clickerUp = coalesce(clickerIconUp, faAngleUp);
         const clickerDown = coalesce(clickerIconDown, faAngleDown);
         const iconClass = typeof(clickerClass) !== 'undefined' ? clickerClass + ' fa-pull-right d-inline-flex' : 'fa-pull-right d-inline-flex';
@@ -23,10 +26,22 @@ class Collapsible extends React.Component {
                                      size="lg"/>
                 </div>
                 <Collapse isOpen={this.state.clicked}>
-                    {children}
+                    {React.Children.map(children, (child, index) => {
+                        const {className} = child.props
+                        const isActive = this.state.activeChild == index;
+                        const cloneChild = React.cloneElement(child, {
+                            className: isActive ? className + _activeClass : className,
+                            onClick: () => this.setState({activeChild: index})
+                        })
+                        return cloneChild
+                    }, this)}
                 </Collapse>
             </div>
         )
+    }
+
+    reset = () => {
+        this.setState({activeChild: -1})
     }
 
 }

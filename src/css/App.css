@@ -319,6 +319,13 @@
     margin-left: auto
 }
 
+.page-item{
+    max-width: 35px;
+    max-height: 21px;
+    font-size: 14px;
+    font-family: Lato;
+}
+
 /* Supaya lebih rapi */
 @media (max-width: 768px) {
     html, body {

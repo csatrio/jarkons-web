@@ -34,7 +34,7 @@ export default class Search extends React.Component {
         this.rating = React.createRef();
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.setState({
             dataPerusahaan: perusahaan(16),
             dataProduk: perusahaan(10)
@@ -88,12 +88,9 @@ export default class Search extends React.Component {
 
                 <Collapsible section="Rating" className="mb-2" sectionClass={sectionClass}
                              ref={this.rating} activeClass="border border-success">
-                    <div className={filterItemClass}><Rating maxRating={5} rating={5}/></div>
-                    <div className={filterItemClass}><Rating maxRating={5} rating={4}/></div>
-                    <div className={filterItemClass}><Rating maxRating={5} rating={3}/></div>
-                    <div className={filterItemClass}><Rating maxRating={5} rating={2}/></div>
-                    <div className={filterItemClass}><Rating maxRating={5} rating={1}/></div>
-                    <div className={filterItemClass}><Rating maxRating={5} rating={0}/></div>
+                    {Array.apply(null, {length: 6}).map((e, idx) =>
+                        <div className={filterItemClass} key={'rt-' + idx}><Rating maxRating={5} rating={idx}/></div>
+                    )}
                 </Collapsible>
 
                 <Row>
@@ -142,24 +139,26 @@ export default class Search extends React.Component {
         const {dataPerusahaan, dataProduk} = this.state
         return (
             <React.Fragment>
-                <this.PageTab/>
+                <div className="pl-2">
+                    <this.PageTab/>
+                </div>
                 <Row>
                     <Col className="border-bottom mr-5 ml-5"></Col>
                 </Row>
                 <Row className="m-2">
-                    <Col sm={2}>
+                    <Col sm={2} className="mt-4 pl-4">
                         <this.FilterCard/>
                     </Col>
                     <Col sm={10}>
 
                         <TabContent activeTab={this.state.activeTab}>
-                            <TabPane tabId="tabPerusahaan">
+                            <TabPane tabId="tabPerusahaan" className="pt-4 pr-2">
                                 <Grid itemPerRow={4} data={dataPerusahaan} renderCallback={this.renderPerusahaan}/>
                                 <Paginations callback={(e) => alert(`clicked ${e}`)} last_page={10}
                                              className="fa-pull-right"/>
                             </TabPane>
 
-                            <TabPane tabId="tabProduk">
+                            <TabPane tabId="tabProduk" className="pt-4 pr-2">
                                 <Grid itemPerRow={4} data={dataProduk} renderCallback={this.renderProduk}/>
                                 <Paginations callback={(e) => alert(`clicked ${e}`)} last_page={2}
                                              className="fa-pull-right"/>

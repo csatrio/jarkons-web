@@ -9,6 +9,13 @@ import {withRouter} from "react-router-dom";
 @observer
 class ModalLogin extends React.Component {
 
+    doLogin = () => {
+        const {LoginStore, history} = this.props;
+        LoginStore.login();
+        history.push('/')
+        LoginStore.close();
+    }
+
     render() {
         const {className, LoginStore} = this.props
         return (
@@ -25,7 +32,8 @@ class ModalLogin extends React.Component {
                             <Row>
                                 <Col className="font-login-label">Email</Col>
                             </Row>
-                            <Input type="email" className="input-login"/>
+                            <Input type="email" className="input-login"
+                                   onChange={(e) => LoginStore.username = e.target.value}/>
                         </FormGroup>
 
                         <FormGroup className="mb-4">
@@ -33,7 +41,16 @@ class ModalLogin extends React.Component {
                                 <Col className="font-login-label">Password</Col>
                                 <Col className="font-login-label text-right font-green">Lupa Kata Sandi</Col>
                             </Row>
-                            <Input type="password" className="input-login"/>
+                            <Input type="password" className="input-login"
+                                   onChange={(e) => LoginStore.password = e.target.value}
+                                   onKeyPress={(e) => {
+                                       const code = e.keyCode || e.which;
+                                       if (code === 13) {
+                                           //13 is the enter keycode
+                                           this.doLogin()
+                                       }
+                                   }}
+                            />
                         </FormGroup>
 
                         <div className="login-separator mb-2"></div>
@@ -45,13 +62,18 @@ class ModalLogin extends React.Component {
 
                         <Row>
                             <Col sm={5}>
-                                <Button size="md" className="btn-success btn-login">Masuk</Button>
+                                <Button size="md" className="btn-success btn-login"
+                                        onClick={this.doLogin}>Masuk</Button>
                             </Col>
 
                             <Col sm={7}>
                                 <div className="font-login-label pl-3">Belum punya akun JarKons?</div>
                                 <div className="font-green pl-3 cursor-pointer"
-                                     onClick={()=>{this.props.history.push('/signup'); LoginStore.close()}}>Daftar</div>
+                                     onClick={() => {
+                                         this.props.history.push('/signup');
+                                         LoginStore.close()
+                                     }}>Daftar
+                                </div>
                             </Col>
                         </Row>
 

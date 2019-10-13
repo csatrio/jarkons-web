@@ -86,7 +86,6 @@ export default class LoginStore {
             window.localStorage.setItem('first_name', first_name);
             window.localStorage.setItem('last_name', last_name);
             window.localStorage.setItem('pasPhoto', pas_photo);
-            window.history.pushState({urlPath: '/'}, "", '/')
         })
         this.isLogin = true
     }

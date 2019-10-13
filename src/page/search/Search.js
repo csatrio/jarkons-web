@@ -7,6 +7,8 @@ import company from '../../assets/search/company.svg';
 import product from '../../assets/search/product.svg';
 import perusahaan from '../../mock/search_perusahaan';
 import Paginations from '../components/Paginations';
+import axios from "axios";
+import settings from "../../store/Settings";
 
 const tabStyle = {
     display: 'flex',
@@ -19,6 +21,8 @@ export default class Search extends React.Component {
         activeTab: 'tabPerusahaan',
         dataPerusahaan: [],
         dataProduk: [],
+        filterKategori: [],
+        filterLokasi: [],
     }
 
     tabDivClass = 'd-inline-flex cursor-pointer font-lato-14 font-weight-bold p-1'
@@ -32,6 +36,12 @@ export default class Search extends React.Component {
         this.kategori = React.createRef();
         this.lokasi = React.createRef();
         this.rating = React.createRef();
+        axios.get(`${settings.apiUrl}/user_info/get-filters/`).then(r => {
+            this.setState({
+                filterKategori: r.data.kategori,
+                filterLokasi: r.data.lokasi
+            })
+        })
     }
 
     componentDidMount() {
@@ -67,23 +77,24 @@ export default class Search extends React.Component {
     )
 
     FilterCard = () => {
+        const {SearchStore} = this.props;
+        const {filterKategori, filterLokasi} = this.state
         const sectionClass = 'font-lato-14 border-bottom border-dark'
         const filterItemClass = 'font-lato-12 cursor-pointer'
         return (
             <Card className="p-2">
                 <Collapsible section="Kategori" className="mb-2" sectionClass={sectionClass}
                              ref={this.kategori}>
-                    <div className={filterItemClass}>Kontraktor</div>
-                    <div className={filterItemClass}>SubKontraktor</div>
-                    <div className={filterItemClass}>Tenaga Ahli</div>
+                    {filterKategori.map((item, i) => {
+                        return <div key={'fk-' + i} className={filterItemClass}>{item.text}</div>
+                    })}
                 </Collapsible>
 
                 <Collapsible section="Lokasi" className="mb-2" sectionClass={sectionClass}
                              ref={this.lokasi}>
-                    <div className={filterItemClass}>Tangerang</div>
-                    <div className={filterItemClass}>Jakarta</div>
-                    <div className={filterItemClass}>Serang</div>
-                    <div className={filterItemClass}>Bali</div>
+                    {filterLokasi.map((item, i) => {
+                        return <div key={'fl-' + i} className={filterItemClass}>{item.text}</div>
+                    })}
                 </Collapsible>
 
                 <Collapsible section="Rating" className="mb-2" sectionClass={sectionClass}

@@ -12,8 +12,8 @@ class ModalLogin extends React.Component {
     doLogin = () => {
         const {LoginStore, history} = this.props;
         LoginStore.login();
-        history.push('/')
         LoginStore.close();
+        history.push('/');
     }
 
     render() {

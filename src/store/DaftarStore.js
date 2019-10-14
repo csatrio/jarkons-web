@@ -50,16 +50,19 @@ export default class DaftarStore {
     isSuccess = false;
 
     @observable
-    errorMessage = 'error';
-
-    @observable
-    successMessage = '';
+    messages = [];
 
     @action
-    toggleSuccess = () => this.isSuccess = !this.isSuccess;
+    toggleSuccess = () => {
+        this.isSuccess = !this.isSuccess;
+        if (!this.isSuccess) this.messages = []
+    }
 
     @action
-    toggleError = () => this.isError = !this.isError;
+    toggleError = () => {
+        this.isError = !this.isError;
+        if (!this.isError) this.messages = []
+    }
 
     @action
     setValue = (value, propertyName) => {
@@ -83,18 +86,24 @@ export default class DaftarStore {
 
     @action
     signUp = () => {
+        if (this.kotaKabupatenList.length === 0) {
+            this.messages.push('Provinsi harus dipilih !')
+            this.messages.push('Kota Kabupaten harus dipilih !')
+            this.isError = true
+            return;
+        }
         const registrationData = {
             "password": this.password,
             "email": this.email,
             "nama": this.nama,
             "bersedia_mengirim_ke_lokasi_pekerjaan": false,
             "no_telepon": this.noTelepon,
-            "profesi_id": this.profesi,
+            "profesi_id": this.profesi !== null ? Number(this.profesi) : Number(this.profesiList[0].id),
             "nama_perusahaan": this.namaPerusahaan,
             "jabatan_di_perusahaan": this.jabatan,
             "alamat_perusahaan": this.alamatPerusahaan,
-            "provinsi_id": this.provinsi,
-            "kabupaten_kota_id": this.kotaKabupaten,
+            "provinsi_id": this.provinsi !== null ? Number(this.provinsi) : Number(this.provinsiList[0].id),
+            "kabupaten_kota_id": this.kotaKabupaten !== null ? Number(this.kotaKabupaten) : Number(this.kotaKabupatenList[0].id),
             "klasifikasi_id": null,
             "kualifikasi_id": null,
             "masalah_yang_sering_dihadapi": "",
@@ -108,14 +117,12 @@ export default class DaftarStore {
             "pengalaman_kerja1": null,
             "pengalaman_kerja2": null
         }
-        console.log(JSON.stringify(registrationData))
         axios.post(`${settings.apiUrl}/user_info/register/`, registrationData).then(r => {
             this.isError = false;
-            this.errorMessage = 'error';
-            this.successMessage = JSON.stringify(r.data);
+            this.messages.push(JSON.stringify(r.data));
+            this.isSuccess = true;
         }).catch(err => {
-            this.errorMessage = err.message;
-            console.log(err.message)
+            this.messages.push(err.data.message);
             this.isError = true;
         })
     }

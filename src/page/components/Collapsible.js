@@ -4,6 +4,9 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAngleDown, faAngleUp} from '@fortawesome/free-solid-svg-icons';
 import {coalesce} from "../../util";
 
+
+const disallowed = ['className', 'onClick'];
+
 class Collapsible extends React.Component {
     state = {
         clicked: false,
@@ -27,12 +30,23 @@ class Collapsible extends React.Component {
                 </div>
                 <Collapse isOpen={this.state.clicked}>
                     {React.Children.map(children, (child, index) => {
-                        const {className} = child.props
+                        const {className, onClick} = child.props
                         const isActive = this.state.activeChild == index;
+                        const filteredProps = Object.keys(child.props)
+                            .filter(key=>!disallowed.includes(key))
+                            .reduce((obj, key) => {
+                                obj[key] = child.props[key]
+                                return obj
+                            }, {})
                         const cloneChild = React.cloneElement(child, {
                             className: isActive ? className + _activeClass : className,
-                            onClick: () => this.setState({activeChild: index})
-                        })
+                            onClick: () => {
+                                this.setState({activeChild: index})
+                                if(typeof(onClick) !== 'undefined')
+                                    onClick();
+                            },
+                            ...filteredProps
+                        });
                         return cloneChild
                     }, this)}
                 </Collapse>

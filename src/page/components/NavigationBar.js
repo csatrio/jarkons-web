@@ -21,6 +21,7 @@ import {inject, observer} from "mobx-react";
 import {storeKeys} from "../../store";
 import {withRouter} from 'react-router-dom';
 import userImg from '../../assets/user/user.svg';
+import {onEnter} from "../../util";
 
 
 @inject(...storeKeys)
@@ -71,7 +72,7 @@ class NavigationBar extends React.Component {
     }
 
     render() {
-        const {history} = this.props
+        const {history, SearchStore} = this.props
 
         return (
             <React.Fragment>
@@ -97,7 +98,9 @@ class NavigationBar extends React.Component {
                                     <FontAwesomeIcon icon={faSearch}/>
                                 </InputGroupText>
                             </InputGroupAddon>
-                            <Input placeholder="Cari nama tempat, perusahaan, atau produk" className="searchtext"/>
+                            <Input placeholder="Cari nama tempat, perusahaan, atau produk" className="searchtext"
+                                   onKeyPress={(e)=>onEnter(e, ()=>SearchStore.doSearch())}
+                                   onChange={(e) => SearchStore.setValue(e.target.value, 'searchQuery')}/>
                         </InputGroup>
 
                         <UserPart history={history}/>

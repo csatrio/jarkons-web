@@ -10,14 +10,16 @@ import {Link, withRouter} from 'react-router-dom';
 @inject(...storeKeys)
 @observer
 class ModalInfo extends React.Component {
-    render(){
-        const {DaftarStore, openFlag, openToggle, messageField, modalHeader} = this.props;
+    render() {
+        const {DaftarStore, openFlag, openToggle, modalHeader} = this.props;
         return (
             <React.Fragment>
                 <Modal isOpen={DaftarStore[openFlag]} toggle={DaftarStore[openToggle]}>
-                    <ModalHeader toggle={DaftarStore[openToggle]}>{modalHeader}</ModalHeader>
+                    <ModalHeader className="text-right" toggle={DaftarStore[openToggle]}>{modalHeader}</ModalHeader>
                     <ModalBody>
-                        {DaftarStore[messageField]}.
+                        {DaftarStore.messages.map(msg =>
+                            <div className="font-lato-14">{msg}</div>
+                        )}
                     </ModalBody>
                 </Modal>
             </React.Fragment>
@@ -139,8 +141,8 @@ class Signup extends React.Component {
                 </Col>
 
                 <Col sm={4}></Col>
-                <ModalInfo openFlag={'isError'} openToggle={'toggleError'} messageField={'errorMessage'} modalHeader={'Registrasi Gagal'}/>
-                <ModalInfo openFlag={'isSuccess'} openToggle={'toggleSuccess'} messageField={'successMessage'} modalHeader={'Registrasi Berhasil'}/>
+                <ModalInfo openFlag={'isError'} openToggle={'toggleError'} modalHeader={'Registrasi Gagal'}/>
+                <ModalInfo openFlag={'isSuccess'} openToggle={'toggleSuccess'} modalHeader={'Registrasi Berhasil'}/>
             </Row>
         );
     }

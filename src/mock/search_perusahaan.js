@@ -1,4 +1,5 @@
 import sample_img from "../assets/mock/sample_grid.png";
+import react_logo from '../assets/react-logo.svg';
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);

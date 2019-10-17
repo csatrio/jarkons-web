@@ -99,7 +99,10 @@ class NavigationBar extends React.Component {
                                 </InputGroupText>
                             </InputGroupAddon>
                             <Input placeholder="Cari nama tempat, perusahaan, atau produk" className="searchtext"
-                                   onKeyPress={(e)=>onEnter(e, ()=>SearchStore.doSearch())}
+                                   onKeyPress={(e)=>onEnter(e, ()=>{
+                                       this.props.history.push('/search');
+                                       SearchStore.doSearch();
+                                   })}
                                    onChange={(e) => SearchStore.setValue(e.target.value, 'searchQuery')}/>
                         </InputGroup>
 

@@ -1,4 +1,4 @@
-export const coalesce = (value, defaultValue) => (typeof(value) !== "undefined") ? value : defaultValue;
+export const coalesce = (value, defaultValue) => (typeof(value) !== "undefined") || value === null ? value : defaultValue;
 
 export const onEnter = (e, fn) => {
     const code = e.keyCode || e.which;

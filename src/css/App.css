@@ -138,6 +138,19 @@
     font-family: Lato;
 }
 
+.font-product-detail {
+    width: 326px;
+    height: 24px;
+    font-family: Lato;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: #42b549;
+}
+
 .image-main-cards {
     width: 80px;
     height: 80px;
@@ -285,6 +298,11 @@
 .border-bottom-green {
     border-bottom: 3px solid green!important;
 }
+
+.border-right-green {
+    border-right: 0.1rem solid green!important;
+}
+
 
 .cursor-pointer {
     cursor: pointer;

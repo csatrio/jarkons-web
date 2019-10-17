@@ -12,6 +12,9 @@ import news, {headline} from "../../mock/news";
 import {mainCarousel} from "../../mock/maincarousel";
 import {kategori} from "../../mock/kategori";
 import {LihatSemua} from "./LihatSemua";
+import TextParser from "../components/TextParser";
+import settings from '../../store/Settings';
+import axios from 'axios';
 
 const responsive = {
     superLargeDesktop: {
@@ -34,7 +37,16 @@ const responsive = {
 };
 
 export default class FrontPage extends React.Component {
+    state = {
+        pengadaan: [],
+    }
+
+    componentDidMount(){
+        axios.get(`${settings.apiUrl}/user_info/pengadaan/`).then(r=>this.setState({pengadaan: r.data.rows}))
+    }
+
     render() {
+        const{pengadaan} = this.state;
         return (
             <React.Fragment>
                 <Container className="container-fluid">
@@ -89,20 +101,22 @@ export default class FrontPage extends React.Component {
 
                     <p className="font-section-heading text-center">Pengadaan</p>
                     <Row className="mb-3">
-                        {pengadaan.map((item, index) => {
+                        {pengadaan.slice(0,3).map((item, index) => {
+                            const{judul, deskripsi_pendek, isi} = item;
                             let colClass = "cards-pengadaan p-4 mt-1";
                             if (index !== pengadaan.length - 1) colClass += " mr-4"
+                            let content = deskripsi_pendek === null ? isi : deskripsi_pendek;
                             return (
                                 <React.Fragment key={'pe-' + index}>
                                     <Col className={colClass}>
-                                        <p className="font-green font-weight-bold">{item.title}</p>
-                                        <p className="text-justify">{item.description}</p>
+                                        <p className="font-green font-weight-bold">{judul}</p>
+                                        <TextParser className="text-justify" text={content}/>
                                     </Col>
                                 </React.Fragment>
                             )
                         })}
                     </Row>
-                    <LihatSemua type="row"/>
+                    <LihatSemua type="row" onClick={()=>this.props.history.push('/pengadaan-list')}/>
 
 
                     <Row className="mb-5 pl-0">
@@ -118,7 +132,7 @@ export default class FrontPage extends React.Component {
                                     </Col>
                                 ))}
                             </Row>
-                            <LihatSemua/>
+                            <LihatSemua onClick={()=>this.props.history.push('/search')}/>
                         </Col>
 
                         <Col sm={5} className="pr-0">
@@ -145,7 +159,7 @@ export default class FrontPage extends React.Component {
                                     </Col>
                                 ))}
                             </Row>
-                            <LihatSemua/>
+                            <LihatSemua onClick={()=>this.props.history.push('/search')}/>
                             <p className="font-section-heading">Jual/Sewa Alat Berat</p>
                             <Row>
                                 {alatberat.map((item, index) => (
@@ -157,7 +171,7 @@ export default class FrontPage extends React.Component {
                                     </Col>
                                 ))}
                             </Row>
-                            <LihatSemua/>
+                            <LihatSemua onClick={()=>this.props.history.push('/search')}/>
                         </Col>
 
                         <Col sm={5} className="pr-0">

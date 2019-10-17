@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 33.185">
+    <defs>
+        <style>
+            .cls-1{fill:#bf392c}.cls-2{fill:#e2574c}.cls-3{fill:#e4e7e7}.cls-4{fill:#cdcfcf}
+        </style>
+    </defs>
+    <g id="silver-medal" transform="translate(-23.472)">
+        <path id="Path_457" d="M93.23 0H83.9L70.415 19.7h9.333z" class="cls-1" data-name="Path 457" transform="translate(-41.758)"/>
+        <path id="Path_458" d="M23.472 0h9.333l13.481 19.7h-9.333z" class="cls-2" data-name="Path 458"/>
+        <path id="Path_459" d="M63.045 93.887a11.407 11.407 0 1 1-11.407 11.407 11.374 11.374 0 0 1 11.407-11.407z" class="cls-3" data-name="Path 459" transform="translate(-25.055 -83.517)"/>
+        <path id="Path_460" d="M88.1 122.053a8.3 8.3 0 1 0 8.3 8.3 8.321 8.321 0 0 0-8.3-8.3zm0 14.518a6.222 6.222 0 1 1 6.222-6.222 6.24 6.24 0 0 1-6.222 6.222z" class="cls-4" data-name="Path 460" transform="translate(-50.11 -108.572)"/>
+    </g>
+</svg>

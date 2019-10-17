@@ -35,7 +35,6 @@ export default class SearchStore {
     @observable
     rating = null;
 
-
     @action
     setValue = (value, propertyName) => {
         console.log(`set property ${propertyName} with value ${value}`)

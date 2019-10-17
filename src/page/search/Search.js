@@ -9,6 +9,10 @@ import Paginations from '../components/Paginations';
 import {inject, observer} from "mobx-react";
 import {storeKeys} from "../../store";
 import react_logo from '../../assets/react-logo.svg';
+import gold from '../../assets/search/gold-medal.svg';
+import silver from '../../assets/search/silver-medal.svg';
+import platinum from '../../assets/search/platinum-reward.svg';
+import {coalesce} from "../../util";
 
 const tabStyle = {
     display: 'flex',
@@ -116,37 +120,54 @@ export default class Search extends React.Component {
 
 
     renderPerusahaan = (item) => {
-        const {nama_perusahaan, alamat_perusahaan, logo_perusahaan} = item
+        const {nama_perusahaan, alamat_perusahaan, logo_perusahaan, gold_member, platinum_member, id} = item
         const imgSrc = logo_perusahaan === null ? react_logo : logo_perusahaan
+
+        let imageMember = silver;
+        if(platinum_member){
+            imageMember = platinum;
+        } else if (gold_member) {
+            imageMember = gold;
+        }
+
         return (
             <React.Fragment>
                 <Card className="cards-product mb-2 text-center mt-0">
-                    <CardImg src={imgSrc}/>
+                    <CardImg src={imgSrc}
+                             onClick={()=>this.props.history.push(`/company-detail/${nama_perusahaan.replaceAll(' ', '-').toLowerCase()}/${id}`)}
+                    />
                 </Card>
-                <div className="ml-1 mb-5">
-                    <div className="font-lato-14 font-green">{nama_perusahaan}</div>
-                    <div className="font-lato-12">{alamat_perusahaan}</div>
-                    <div>
-                        <Rating maxRating={5} rating={1}/>
-                        <div className="d-inline-flex ml-2 font-lato-12">{1}</div>
-                    </div>
+                <div className="row ml-1 mb-5">
+                    <Col sm={8}>
+                        <div className="font-lato-14 font-green">{nama_perusahaan}</div>
+                        <div className="font-lato-12">{alamat_perusahaan}</div>
+                        <div>
+                            <Rating maxRating={5} rating={1}/>
+                            <div className="d-inline-flex ml-2 font-lato-12">{1}</div>
+                        </div>
+                    </Col>
+                    <Col sm={4}>
+                        <Media src={imageMember} height={33.2} width={28}/>
+                    </Col>
                 </div>
             </React.Fragment>
         )
     }
 
     renderProduk = (item) => {
-        const {nama_produk, gambar, deskripsi, perusahaan} = item
+        const {nama_produk, gambar, perusahaan, id} = item
+        const namaPerusahaan = (perusahaan === null) ? '-' : perusahaan.nama_perusahaan
         const imgSrc = gambar === null ? react_logo : gambar
+        const link = `/product-detail/${nama_produk.replaceAll(' ', '-').toLowerCase()}/${id}`
         return (
             <React.Fragment>
-                <Card className="cards-product mb-2 text-center mt-0">
+                <Card className="cards-product mb-2 text-center mt-0"
+                onClick={()=>this.props.history.push(link)}>
                     <CardImg src={imgSrc}/>
                 </Card>
                 <div className="ml-1 mb-5">
                     <div className="font-lato-14 font-green">{nama_produk}</div>
-                    <div className="font-lato-12">{perusahaan.nama_perusahaan}</div>
-                    <div className="font-lato-12">{deskripsi}</div>
+                    <div className="font-lato-12">{namaPerusahaan}</div>
                 </div>
             </React.Fragment>
         )

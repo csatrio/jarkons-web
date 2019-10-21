@@ -1,7 +1,7 @@
 import {action, observable} from 'mobx';
 import settings from './Settings';
 import axios from 'axios';
-import {notNull, notUndefined, notNullUndefined} from "../util";
+import {notNullUndefined} from "../util";
 
 export default class SearchStore {
 
@@ -34,6 +34,12 @@ export default class SearchStore {
 
     @observable
     rating = null;
+
+    @observable
+    isMounted = false;
+
+    @observable
+    toggleKategoriFilter = false;
 
     @action
     setValue = (value, propertyName) => {

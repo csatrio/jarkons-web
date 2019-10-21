@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from '../../page/components/Grid';
-import {Card, CardImg, Col, Row, Button, TabContent, TabPane, Media} from 'reactstrap'
+import {Button, Card, CardImg, Col, Media, Row, TabContent, TabPane} from 'reactstrap'
 import Collapsible from '../components/Collapsible';
 import Rating from "../../page/components/Rating";
 import company from '../../assets/search/company.svg';
@@ -12,7 +12,6 @@ import react_logo from '../../assets/react-logo.svg';
 import gold from '../../assets/search/gold-medal.svg';
 import silver from '../../assets/search/silver-medal.svg';
 import platinum from '../../assets/search/platinum-reward.svg';
-import {coalesce} from "../../util";
 
 const tabStyle = {
     display: 'flex',
@@ -44,7 +43,7 @@ class FilterCard extends React.Component {
         const filterItemClass = 'font-lato-12 cursor-pointer'
         return (
             <Card className="p-2">
-                <Collapsible section="Kategori" className="mb-2" sectionClass={sectionClass}
+                <Collapsible section="Kategori" className="mb-2" sectionClass={sectionClass} isOpen={SearchStore.toggleKategoriFilter}
                              ref={this.kategori}>
                     {SearchStore.filterKategori.map((item, i) => {
                         return <div key={'fk-' + i}
@@ -92,6 +91,15 @@ export default class Search extends React.Component {
         const {setValue, doSearch} = this.props.SearchStore
         setValue(tab, 'activeTab');
         doSearch();
+    }
+
+    componentDidMount(){
+        console.log('mount search')
+        this.props.SearchStore.isMounted = true;
+    }
+
+    componentWillUnmount(){
+        this.props.SearchStore.isMounted = false;
     }
 
     constructor(props) {

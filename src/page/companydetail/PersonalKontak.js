@@ -1,7 +1,6 @@
 import React from 'react';
-import {Card, CardBody, CardImg, Table} from 'reactstrap';
+import {Card, CardBody} from 'reactstrap';
 import Grid from "../components/Grid";
-import react_logo from "../../assets/react-logo.svg";
 
 function renderItem(item) {
     const {nama, jabatan, telepon, email, foto} = item

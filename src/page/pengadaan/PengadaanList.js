@@ -1,6 +1,5 @@
 import React from 'react';
-import {Card, CardBody, CardImg, Col, Media, Row, Table} from 'reactstrap';
-import Grid from "../components/Grid";
+import {Col, Media, Row} from 'reactstrap';
 import react_logo from "../../assets/react-logo.svg";
 import axios from "axios";
 import settings from "../../store/Settings";

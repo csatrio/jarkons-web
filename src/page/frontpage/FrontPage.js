@@ -3,7 +3,6 @@ import {Card, CardFooter, CardImg, Col, Container, Row} from 'reactstrap'
 import Carousel from 'react-multi-carousel';
 import "react-multi-carousel/lib/styles.css";
 import testimonial from '../../mock/testimonial';
-import pengadaan from '../../mock/pengadaan';
 import kontraktor from '../../mock/kontraktor';
 import developer from '../../mock/developer';
 import alatberat from '../../mock/alatberat';
@@ -41,12 +40,12 @@ export default class FrontPage extends React.Component {
         pengadaan: [],
     }
 
-    componentDidMount(){
-        axios.get(`${settings.apiUrl}/user_info/pengadaan/`).then(r=>this.setState({pengadaan: r.data.rows}))
+    componentDidMount() {
+        axios.get(`${settings.apiUrl}/user_info/pengadaan/`).then(r => this.setState({pengadaan: r.data.rows}))
     }
 
     render() {
-        const{pengadaan} = this.state;
+        const {pengadaan} = this.state;
         return (
             <React.Fragment>
                 <Container className="container-fluid">
@@ -86,12 +85,10 @@ export default class FrontPage extends React.Component {
                                       removeArrowOnDeviceType={["tablet", "mobile"]}
                             >
                                 {kategori.map((item, index) => (
-                                    <React.Fragment key={'cc-' + index}>
-                                        <Col className="text-center">
-                                            <img className="image-main-cards mt-3" src={item.imageUrl}/>
-                                            <p className="text-center">{item.title}</p>
-                                        </Col>
-                                    </React.Fragment>
+                                    <Col key={'cc-' + index} className="text-center">
+                                        <img className="image-main-cards mt-3" src={item.imageUrl}/>
+                                        <p className="text-center">{item.title}</p>
+                                    </Col>
                                 ))}
                             </Carousel>
                         </Col>
@@ -101,22 +98,20 @@ export default class FrontPage extends React.Component {
 
                     <p className="font-section-heading text-center">Pengadaan</p>
                     <Row className="mb-3">
-                        {pengadaan.slice(0,3).map((item, index) => {
-                            const{judul, deskripsi_pendek, isi} = item;
+                        {pengadaan.slice(0, 3).map((item, index) => {
+                            const {judul, deskripsi_pendek, isi} = item;
                             let colClass = "cards-pengadaan p-4 mt-1";
                             if (index !== pengadaan.length - 1) colClass += " mr-4"
                             let content = deskripsi_pendek === null ? isi : deskripsi_pendek;
                             return (
-                                <React.Fragment key={'pe-' + index}>
-                                    <Col className={colClass}>
-                                        <p className="font-green font-weight-bold">{judul}</p>
-                                        <TextParser className="text-justify" text={content}/>
-                                    </Col>
-                                </React.Fragment>
+                                <Col key={'pe-' + index} className={colClass}>
+                                    <p className="font-green font-weight-bold">{judul}</p>
+                                    <TextParser key={'tp-pe-' + index} className="text-justify" text={content}/>
+                                </Col>
                             )
                         })}
                     </Row>
-                    <LihatSemua type="row" onClick={()=>this.props.history.push('/pengadaan-list')}/>
+                    <LihatSemua type="row" onClick={() => this.props.history.push('/pengadaan-list')}/>
 
 
                     <Row className="mb-5 pl-0">
@@ -132,7 +127,7 @@ export default class FrontPage extends React.Component {
                                     </Col>
                                 ))}
                             </Row>
-                            <LihatSemua onClick={()=>this.props.history.push('/search')}/>
+                            <LihatSemua onClick={() => this.props.history.push('/search')}/>
                         </Col>
 
                         <Col sm={5} className="pr-0">
@@ -159,7 +154,7 @@ export default class FrontPage extends React.Component {
                                     </Col>
                                 ))}
                             </Row>
-                            <LihatSemua onClick={()=>this.props.history.push('/search')}/>
+                            <LihatSemua onClick={() => this.props.history.push('/search')}/>
                             <p className="font-section-heading">Jual/Sewa Alat Berat</p>
                             <Row>
                                 {alatberat.map((item, index) => (
@@ -171,7 +166,7 @@ export default class FrontPage extends React.Component {
                                     </Col>
                                 ))}
                             </Row>
-                            <LihatSemua onClick={()=>this.props.history.push('/search')}/>
+                            <LihatSemua onClick={() => this.props.history.push('/search')}/>
                         </Col>
 
                         <Col sm={5} className="pr-0">

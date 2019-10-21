@@ -1,7 +1,7 @@
 import React from 'react';
-import {Row, Col, Media, Button} from 'reactstrap';
+import {Button, Col, Media, Row} from 'reactstrap';
 import reactImage from '../assets/react-logo.svg';
-import {coalesce, notNull, notUndefined} from "../util";
+import {notNull, notUndefined} from "../util";
 import axios from 'axios';
 import settings from '../store/Settings';
 import TextParser from "./components/TextParser";

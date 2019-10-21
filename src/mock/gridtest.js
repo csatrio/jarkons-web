@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from '../page/components/Grid';
-import {Card, CardImg, Col, Row, Button} from 'reactstrap'
+import {Button, Card, CardImg, Col, Row} from 'reactstrap'
 import Collapsible from '../page/components/Collapsible';
 import Rating from "../page/components/Rating";
 import perusahaan from '../mock/search_perusahaan';

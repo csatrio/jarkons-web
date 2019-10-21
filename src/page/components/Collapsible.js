@@ -14,7 +14,7 @@ class Collapsible extends React.Component {
     }
 
     render() {
-        const {children, section, sectionClass, clickerClass, clickerIconUp, clickerIconDown, className, activeClass} = this.props;
+        const {children, section, sectionClass, clickerClass, clickerIconUp, clickerIconDown, className, activeClass, isOpen} = this.props;
         const _activeClass = typeof(activeClass) === 'undefined' ? ' font-green' : ' ' + activeClass;
         const clickerUp = coalesce(clickerIconUp, faAngleUp);
         const clickerDown = coalesce(clickerIconDown, faAngleDown);
@@ -28,7 +28,7 @@ class Collapsible extends React.Component {
                                      className={iconClass}
                                      size="lg"/>
                 </div>
-                <Collapse isOpen={this.state.clicked}>
+                <Collapse isOpen={this.state.clicked || isOpen}>
                     {React.Children.map(children, (child, index) => {
                         const {className, onClick} = child.props
                         const isActive = this.state.activeChild == index;

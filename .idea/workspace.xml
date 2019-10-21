@@ -2,29 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eff47659-10de-4419-855a-1c0851149856" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/page/LowonganList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/page/ProductDetail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/page/companydetail/CompanyDetail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/page/companydetail/KantorCabang.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/page/companydetail/Lowongan.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/page/companydetail/Pengalaman.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/page/companydetail/PersonalKontak.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/page/companydetail/Produk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/page/components/TextParser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/page/pengadaan/PengadaanDetail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/page/pengadaan/PengadaanList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mock/pengadaan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/mock/pengadaan.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/companydetail/Lowongan.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/companydetail/Lowongan.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/components/Collapsible.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/components/Collapsible.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/page/components/NavigationBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/components/NavigationBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/page/components/TopMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/components/TopMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page/components/TextParser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/components/TextParser.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/page/frontpage/FrontPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/frontpage/FrontPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/page/search/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/page/search/Search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/SearchStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/SearchStore.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/Settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/Settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,8 +25,8 @@
     <session id="1554466500">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="28" />
-          <entry key="project.open.time.0" value="2" />
+          <entry key="project.closed" value="31" />
+          <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="2" />
@@ -49,12 +35,12 @@
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.16" value="2" />
-          <entry key="project.open.time.2" value="4" />
+          <entry key="project.open.time.2" value="5" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.open.time.9" value="6" />
-          <entry key="project.opened" value="31" />
+          <entry key="project.open.time.9" value="7" />
+          <entry key="project.opened" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -62,8 +48,8 @@
           <entry key="css" value="19" />
           <entry key="gitignore" value="1" />
           <entry key="jpg" value="1" />
-          <entry key="js" value="192" />
-          <entry key="json" value="7" />
+          <entry key="js" value="203" />
+          <entry key="json" value="8" />
           <entry key="png" value="8" />
           <entry key="rnc" value="1" />
           <entry key="svg" value="7" />
@@ -74,8 +60,8 @@
         <counts>
           <entry key="CSS" value="19" />
           <entry key="Image" value="9" />
-          <entry key="JSON" value="7" />
-          <entry key="JavaScript" value="192" />
+          <entry key="JSON" value="8" />
+          <entry key="JavaScript" value="203" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="RNG Compact" value="1" />
           <entry key="SVG" value="7" />
@@ -91,7 +77,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="3449" />
-          <entry key="js" value="49587" />
+          <entry key="js" value="52037" />
           <entry key="json" value="65" />
           <entry key="txt" value="99" />
         </counts>
@@ -100,7 +86,7 @@
         <counts>
           <entry key="CSS" value="3449" />
           <entry key="JSON" value="65" />
-          <entry key="JavaScript" value="49587" />
+          <entry key="JavaScript" value="52037" />
           <entry key="PLAIN_TEXT" value="99" />
         </counts>
       </usages-collector>
@@ -108,11 +94,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/page/frontpage/FrontPage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="161" column="40" lean-forward="true" selection-start-line="161" selection-start-column="40" selection-end-line="161" selection-end-column="88" />
+            <state relative-caret-position="-604">
+              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/page/components/NavigationBar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="119" column="39" selection-start-line="119" selection-start-column="39" selection-end-line="119" selection-end-column="39" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -121,31 +119,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Routes.js">
+        <entry file="file://$PROJECT_DIR$/src/store/SearchStore.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+            <state relative-caret-position="210">
+              <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
               <folding>
-                <element signature="e#0#25#0" expanded="true" />
+                <element signature="e#0#40#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/page/pengadaan/PengadaanDetail.js">
+        <entry file="file://$PROJECT_DIR$/src/page/search/Search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="132">
+              <caret line="46" column="92" lean-forward="true" selection-start-line="46" selection-start-column="92" selection-end-line="46" selection-end-column="92" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/page/pengadaan/PengadaanList.js">
+        <entry file="file://$PROJECT_DIR$/src/page/components/Collapsible.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="34" column="88" selection-start-line="34" selection-start-column="88" selection-end-line="34" selection-end-column="88" />
+            <state>
+              <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -162,10 +163,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>size</find>
-      <find>signup</find>
-      <find>&quot;</find>
-      <find>href=&quot;#&quot;</find>
       <find>&quot;cursor-pointer&quot;</find>
       <find>tabproduk</find>
       <find>jsonweb</find>
@@ -183,7 +180,6 @@
       <find>kotaka</find>
       <find>messagefie</find>
       <find>filter_kate</find>
-      <find>console</find>
       <find>activetab</find>
       <find>isactive</find>
       <find>border-bottom-gre</find>
@@ -192,9 +188,13 @@
       <find>&lt;p&gt;</find>
       <find>d-inline-flex</find>
       <find>pt-4 pl-5 pr-5</find>
+      <find>toggle</find>
+      <find>isOpen</find>
+      <find>key=</find>
+      <find>console</find>
+      <find>mounted</find>
     </findStrings>
     <replaceStrings>
-      <replace>LihatSemua type=&quot;row&quot;</replace>
       <replace>auto</replace>
       <replace>imageUrl:</replace>
       <replace>.imageUrl</replace>
@@ -224,6 +224,7 @@
       <replace>&lt;p className=&quot;font-lato-14&quot;&gt;</replace>
       <replace>d-flex justify-content-between</replace>
       <replace>pt-4 pl-5 pr-5 w-100</replace>
+      <replace>navbarOpen</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src/mock</dir>
@@ -263,9 +264,7 @@
         <option value="$PROJECT_DIR$/src/page/Signup.js" />
         <option value="$PROJECT_DIR$/src/store/DaftarStore.js" />
         <option value="$PROJECT_DIR$/src/mock/search_perusahaan.js" />
-        <option value="$PROJECT_DIR$/src/page/components/Collapsible.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/store/SearchStore.js" />
         <option value="$PROJECT_DIR$/src/CompanyDetail.js" />
         <option value="$PROJECT_DIR$/src/css/App.css" />
         <option value="$PROJECT_DIR$/src/page/CompanyDetail.js" />
@@ -276,18 +275,20 @@
         <option value="$PROJECT_DIR$/src/util/index.js" />
         <option value="$PROJECT_DIR$/src/page/ProductDetail.js" />
         <option value="$PROJECT_DIR$/src/page/companydetail/CompanyDetail.js" />
-        <option value="$PROJECT_DIR$/src/page/search/Search.js" />
-        <option value="$PROJECT_DIR$/src/page/components/TextParser.js" />
         <option value="$PROJECT_DIR$/src/page/LowonganList.js" />
-        <option value="$PROJECT_DIR$/src/page/companydetail/Lowongan.js" />
-        <option value="$PROJECT_DIR$/src/page/components/NavigationBar.js" />
         <option value="$PROJECT_DIR$/src/page/components/TopMenu.js" />
-        <option value="$PROJECT_DIR$/src/store/Settings.js" />
         <option value="$PROJECT_DIR$/src/page/PengadaanDetail.js" />
         <option value="$PROJECT_DIR$/src/page/pengadaan/Pengadaan.js" />
         <option value="$PROJECT_DIR$/src/Routes.js" />
         <option value="$PROJECT_DIR$/src/page/pengadaan/PengadaanList.js" />
+        <option value="$PROJECT_DIR$/src/store/Settings.js" />
+        <option value="$PROJECT_DIR$/src/page/companydetail/Lowongan.js" />
+        <option value="$PROJECT_DIR$/src/page/search/Search.js" />
         <option value="$PROJECT_DIR$/src/page/frontpage/FrontPage.js" />
+        <option value="$PROJECT_DIR$/src/page/components/TextParser.js" />
+        <option value="$PROJECT_DIR$/src/page/components/Collapsible.js" />
+        <option value="$PROJECT_DIR$/src/store/SearchStore.js" />
+        <option value="$PROJECT_DIR$/src/page/components/NavigationBar.js" />
       </list>
     </option>
   </component>
@@ -307,8 +308,8 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="width" value="1366" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1362" />
     <option name="height" value="741" />
   </component>
   <component name="ProjectView">
@@ -316,7 +317,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -372,12 +372,26 @@
               <item name="jarkons-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="page" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jarkons-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jarkons-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
               <item name="pengadaan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="jarkons-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jarkons-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -471,7 +485,10 @@
       <workItem from="1571030906337" duration="11605000" />
       <workItem from="1571083070321" duration="277000" />
       <workItem from="1571123729935" duration="10979000" />
-      <workItem from="1571212712979" duration="21274000" />
+      <workItem from="1571212712979" duration="22066000" />
+      <workItem from="1571340712661" duration="3771000" />
+      <workItem from="1571415069113" duration="5324000" />
+      <workItem from="1571685906266" duration="632000" />
     </task>
     <task id="LOCAL-00001" summary="fix footer image margin bottom">
       <created>1569411454245</created>
@@ -498,13 +515,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233122000" />
+    <option name="totallyTimeSpent" value="243641000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-3" y="-1" width="1372" height="745" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1816828" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17721519" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -519,7 +536,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50037396" side_tool="true" weight="0.19773096" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49962604" weight="0.19448946" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49962604" weight="0.19124797" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -561,13 +578,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="change to functional component to improve speed" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/page/KebijakanPrivasi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="155" column="40" selection-start-line="155" selection-start-column="40" selection-end-line="155" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@fortawesome/free-solid-svg-icons/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
@@ -584,13 +594,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/search/product.svg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mock/gridtest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="66" column="64" selection-start-line="66" selection-start-column="64" selection-end-line="66" selection-end-column="64" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/reactstrap/src/PaginationLink.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -617,13 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -693,9 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
           <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -703,9 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -718,16 +708,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/search/gold-medal.svg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/components/Collapsible.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="45" column="40" selection-start-line="45" selection-start-column="40" selection-end-line="45" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-scripts/lib/react-app.d.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -743,9 +723,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -753,16 +730,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="150" selection-start-line="150" selection-end-line="150" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/SearchStore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-330">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -791,9 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="354">
           <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -804,20 +768,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/page/companydetail/CompanyDetail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -825,9 +779,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="49" column="80" selection-start-line="49" selection-start-column="80" selection-end-line="49" selection-end-column="80" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -835,36 +786,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/companydetail/Lowongan.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="23" column="74" selection-start-line="23" selection-start-column="74" selection-end-line="23" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/search/Search.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="147" column="26" selection-start-line="147" selection-start-column="26" selection-end-line="147" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/components/NavigationBar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="104" column="38" selection-start-line="104" selection-start-column="38" selection-end-line="104" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -875,7 +796,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/reactstrap/src/CarouselControl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="32" column="34" selection-start-line="32" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/pengadaan/PengadaanDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/pengadaan/PengadaanList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="34" column="88" selection-start-line="34" selection-start-column="88" selection-end-line="34" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mock/gridtest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="915">
+          <caret line="66" column="64" selection-start-line="66" selection-start-column="64" selection-end-line="66" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/store/Settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/companydetail/Lowongan.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="29" column="74" selection-start-line="29" selection-start-column="74" selection-end-line="29" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
@@ -884,39 +861,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/page/components/TextParser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="46" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/pengadaan/PengadaanList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="34" column="88" selection-start-line="34" selection-start-column="88" selection-end-line="34" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/pengadaan/PengadaanDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="105">
+          <caret line="7" column="76" selection-start-line="7" selection-start-column="76" selection-end-line="7" selection-end-column="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/page/frontpage/FrontPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="161" column="40" lean-forward="true" selection-start-line="161" selection-start-column="40" selection-end-line="161" selection-end-column="88" />
+        <state relative-caret-position="-604">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/search/Search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="46" column="92" lean-forward="true" selection-start-line="46" selection-start-column="92" selection-end-line="46" selection-end-column="92" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/components/Collapsible.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/SearchStore.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/components/NavigationBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="119" column="39" selection-start-line="119" selection-start-column="39" selection-end-line="119" selection-end-column="39" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

@@ -3,14 +3,15 @@ import {
     Button,
     ButtonGroup,
     Collapse,
+    Container,
     Input,
     InputGroup,
     InputGroupAddon,
     InputGroupText,
+    Media,
     Navbar,
     NavbarBrand,
     NavbarToggler,
-    Media,
 } from 'reactstrap';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faListUl, faSearch} from '@fortawesome/free-solid-svg-icons'
@@ -58,48 +59,103 @@ class UserPart extends React.Component {
 
 @inject(...storeKeys)
 @observer
+class KategoriOverlay extends React.PureComponent {
+
+    state = {
+        selectedIndex: 0
+    }
+
+    constructor(props) {
+        super(props)
+        if (props.SearchStore.filterKategori.length === 0)
+            props.SearchStore.getFilters();
+    }
+
+    render() {
+
+        const {isOpen, SearchStore} = this.props;
+        const {selectedIndex} = this.state;
+        const inactiveClass = "font-lato-14 ml-4 cursor-pointer";
+        const activeClass = inactiveClass + " border-bottom-green";
+        if (isOpen) {
+            return (
+                <React.Fragment>
+                    <Container className="d-inline-flex">
+                        {SearchStore.filterKategori.map((item, i) => (
+                                <div key={'ko-' + i}
+                                     className={selectedIndex === i ? activeClass : inactiveClass}
+                                     onClick={() => this.setState({selectedIndex: i})}
+                                >{item.text}</div>
+                            )
+                        )}
+                    </Container>
+
+                    <div className="border-bottom mb-3"></div>
+                </React.Fragment>
+            )
+        }
+        return null;
+    }
+}
+
+
+@inject(...storeKeys)
+@observer
 class NavigationBar extends React.Component {
     state = {
-        isOpen: false,
+        navbarOpen: false,
+        kategoriOpen: false,
     };
 
     constructor(props) {
         super(props);
     }
 
-    toggle = () => {
-        this.setState({isOpen: !this.state.isOpen});
+
+    toggleNavbar = () => this.setState({navbarOpen: !this.state.navbarOpen})
+    toggleKategori = () => {
+        const {SearchStore} = this.props;
+        if (SearchStore.isMounted) {
+            SearchStore.setValue(!SearchStore.toggleKategoriFilter, 'toggleKategoriFilter')
+        } else {
+            this.setState({kategoriOpen: !this.state.kategoriOpen})
+        }
     }
 
     render() {
-        const {history, SearchStore} = this.props
+        const {history, SearchStore} = this.props;
+        const {navbarOpen, kategoriOpen} = this.state;
 
         return (
             <React.Fragment>
-                <Navbar light expand="md">
+                <Navbar light expand="md" className={kategoriOpen && !SearchStore.isMounted ? 'mb-0 pb-0' : undefined}
+                        sticky="top">
 
                     <NavbarBrand onClick={() => this.props.history.push('/')} className="cursor-pointer">
                         <img src={Logo} className="Logo"/>
                     </NavbarBrand>
 
 
-                    <NavbarToggler onClick={this.toggle}/>
-                    <Collapse isOpen={this.state.isOpen} navbar>
+                    <NavbarToggler onClick={this.toggleNavbar}/>
+                    <Collapse navbarOpen={navbarOpen} navbar>
 
                         <div className="btn-kategori cursor-pointer col-sm-1"
-                             onClick={() => this.props.history.push('/search')}>
+                             onClick={this.toggleKategori}>
                             <FontAwesomeIcon icon={faListUl}/>
                             &nbsp;&nbsp;Kategori
                         </div>
 
-                        <InputGroup className="searchbar col-sm-7 mb-1">
-                            <InputGroupAddon addonType="prepend">
+                        <InputGroup className="searchbar cursor-pointer col-sm-7 mb-1">
+                            <InputGroupAddon addonType="prepend" onClick={() => {
+                                this.props.history.push('/search');
+                                SearchStore.doSearch();
+                            }}>
                                 <InputGroupText className="searchicon">
                                     <FontAwesomeIcon icon={faSearch}/>
                                 </InputGroupText>
                             </InputGroupAddon>
                             <Input placeholder="Cari nama tempat, perusahaan, atau produk" className="searchtext"
-                                   onKeyPress={(e)=>onEnter(e, ()=>{
+                                   onKeyPress={(e) => onEnter(e, () => {
                                        this.props.history.push('/search');
                                        SearchStore.doSearch();
                                    })}
@@ -120,6 +176,7 @@ class NavigationBar extends React.Component {
                     </Collapse>
 
                 </Navbar>
+                <KategoriOverlay isOpen={kategoriOpen && !SearchStore.isMounted}/>
             </React.Fragment>
         );
     }

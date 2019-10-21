@@ -1,5 +1,5 @@
 import React from 'react';
-import {Card, CardImg, Table} from 'reactstrap';
+import {Card, CardImg} from 'reactstrap';
 import Grid from "../components/Grid";
 import react_logo from "../../assets/react-logo.svg";
 

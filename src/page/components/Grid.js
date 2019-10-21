@@ -1,5 +1,5 @@
 import React from 'react';
-import {Row, Col} from 'reactstrap';
+import {Col, Row} from 'reactstrap';
 
 export default class Grid extends React.Component {
 

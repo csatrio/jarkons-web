@@ -1,13 +1,12 @@
 import React from 'react';
-import {Card, CardBody, CardImg, Col, Media, Row, Table} from 'reactstrap';
-import Grid from "../components/Grid";
+import {Col, Media, Row} from 'reactstrap';
 import react_logo from "../../assets/react-logo.svg";
 
 let _perusahaan = '-';
 let _logo = undefined;
 
 function renderItem(item, i) {
-    const {posisi, deskripsi, berakhir_pada} = item
+    const {nama_pekerjaan, desc_pekerjaan, end_date} = item
     const companyLogo = typeof(_logo) === 'undefined' || _logo === null ? react_logo : _logo;
     return (
         <Row className="d-flex justify-content-between border mb-2" key={'lowongan-' + i}>
@@ -17,17 +16,17 @@ function renderItem(item, i) {
             <Col sm={8} className="pt-4">
                 <div className="d-flex justify-content-between">
                     <p className="font-lato-14 font-green">Posisi: </p>
-                    <p className="font-lato-14">{posisi}</p>
+                    <p className="font-lato-14">{nama_pekerjaan}</p>
                 </div>
 
                 <div className="d-flex justify-content-between">
                     <p className="font-lato-14 font-green">Deskripsi: </p>
-                    <p className="font-lato-14">{deskripsi}</p>
+                    <p className="font-lato-14">{desc_pekerjaan}</p>
                 </div>
 
                 <div className="d-flex justify-content-between">
                     <p className="font-lato-14 font-green">Berakhir Pada: </p>
-                    <p className="font-lato-14">{berakhir_pada}</p>
+                    <p className="font-lato-14">{end_date.toLocaleString()}</p>
                 </div>
             </Col>
         </Row>

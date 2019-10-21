@@ -5,7 +5,7 @@ export default function (props) {
     const data = (text !== null && typeof(text) !== 'undefined') ? text.split('\n') : [];
     return (
         <React.Fragment>
-            {data.flatMap(e => e.length > 0 ?  <p className={className} style={style}>{e}</p> : [])}
+            {data.flatMap((e,i) => e.length > 0 ?  <p  key={'textParser-', i} className={className} style={style}>{e}</p> : [])}
         </React.Fragment>
     );
 }

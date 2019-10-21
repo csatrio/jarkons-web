@@ -1,18 +1,12 @@
 import React from 'react';
-import {Row, Col, Media, Button, Input, TabPane, TabContent, Table} from 'reactstrap';
+import {Col, Media, Row, TabContent, TabPane} from 'reactstrap';
 import reactImage from '../../assets/react-logo.svg';
-import {coalesce, notNull, notUndefined} from "../../util/index";
+import {coalesce, notUndefined} from "../../util/index";
 import axios from 'axios';
 import settings from '../../store/Settings';
 import Rating from "../components/Rating";
-import gold from '../../assets/search/gold-medal.svg'
-import silver from '../../assets/search/silver-medal.svg';
 import platinum from '../../assets/search/platinum-reward.svg';
-import company from "../../assets/search/company.svg";
-import product from "../../assets/search/product.svg";
 import TextParser from "../components/TextParser";
-import Grid from "../components/Grid";
-import Paginations from "../components/Paginations";
 import Pengalaman from './Pengalaman';
 import Produk from "./Produk";
 import KantorCabang from "./KantorCabang";
